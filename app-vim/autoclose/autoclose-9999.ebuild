@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-RESTRICT="mirror"
-
 EAPI=3
+
+RESTRICT="mirror"
 
 inherit vim-plugin git-2
 

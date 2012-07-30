@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-RESTRICT="mirror"
-
 EAPI="2"
+
+RESTRICT="mirror"
 
 #VIM_PLUGIN_VIM_VERSION="7.0"
 inherit vim-plugin

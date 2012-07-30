@@ -2,8 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-RESTRICT="mirror"
 EAPI=4
+RESTRICT="mirror"
 
 DESCRIPTION="sound effect generator"
 HOMEPAGE="http://drpetter.se/project_sfxr.html"

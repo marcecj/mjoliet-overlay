@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-vim/nerdtree/nerdtree-4.1.0.ebuild,v 1.1 2010/06/27 16:36:22 spatz Exp $
 
-RESTRICT="mirror"
-
 EAPI=3
+
+RESTRICT="mirror"
 
 VIM_PLUGIN_VIM_VERSION="7.0"
 inherit vim-plugin

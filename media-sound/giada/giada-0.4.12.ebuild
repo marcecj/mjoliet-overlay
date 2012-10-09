@@ -10,7 +10,7 @@ inherit flag-o-matic
 
 DESCRIPTION="Giada is a free, minimal, hardcore audio tool for djs and live performers."
 HOMEPAGE="http://www.monocasual.com/giada/"
-SRC_URI="http://www.monocasual.com/giada/download.php?dist=source&file=${P/-/_}_src.tar.gz"
+SRC_URI="http://www.monocasual.com/giada/download.php?dist=source&file=${P/-/_}_src.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

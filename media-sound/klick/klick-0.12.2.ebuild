@@ -12,7 +12,7 @@ DESCRIPTION="An advanced command-line based metronome for JACK."
 HOMEPAGE="http://das.nasophon.de/klick/"
 SRC_URI="http://das.nasophon.de/download/${P}.tar.gz"
 
-LICENSE=""
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="osc rubberband doc"

@@ -1,0 +1,13 @@
+--- gtklick.orig/bin/gtklick
++++ gtklick/bin/gtklick
+@@ -11,8 +11,9 @@
+ # (at your option) any later version.
+ 
+ 
+-from gtklick.gtklick import GTKlick
+ import sys
++sys.path.append('/usr/share/gtklick')
++from gtklick.gtklick import GTKlick
+ import os.path
+ 
+ bin_dir = os.path.abspath(os.path.dirname(sys.argv[0]))

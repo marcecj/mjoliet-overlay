@@ -47,6 +47,11 @@ pkg_setup() {
 	fi
 }
 
+src_prepare() {
+	# https://github.com/jackaudio/jack2/commit/95a1162d6aecc91882e4d8b01ba7fb12f6d29d1c
+	epatch "${FILESDIR}/1.9.9_wscript_fix_doxygen_build.patch"
+}
+
 src_configure() {
 	use alsa     && myconf="${myconf} --alsa"
 	use dbus     && myconf="${myconf} --dbus"
@@ -58,4 +63,12 @@ src_configure() {
 	use 32bit    && myconf="${myconf} --mixed"
 
 	waf-utils_src_configure ${myconf}
+}
+
+src_install() {
+	# fix doxygen install failure
+	mkdir build/default &>/dev/null
+	ln -s ../../html build/default/html
+
+	waf-utils_src_install
 }

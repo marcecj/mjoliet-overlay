@@ -1,0 +1,15 @@
+#!/sbin/runscript
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+pidfile="/tmp/eibd.pid"
+command="/usr/bin/eibd"
+command_args="${EIBD_ARGS} ${EIBD_URL} --pid-file=${pidfile} -d${EIBD_LOGFILE}"
+start_stop_daemon_args="-u ${EIBD_USER}"
+description="Daemon for accessing the EIB/KNX bus"
+
+depend() {
+	need localmount
+	need net
+}

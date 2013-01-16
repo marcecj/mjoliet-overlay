@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit autotools python git-2
+inherit autotools python user git-2
 
 PYTHON_DEPEND="python?2"
 
@@ -49,6 +49,8 @@ src_configure() {
 src_install() {
 	if use eibd; then
 		emake DESTDIR="${D}" install || die "emake install failed"
+		doinitd ${FILESDIR}/init.d/eibd
+		doconfd ${FILESDIR}/conf.d/eibd
 	fi
 
 	if use python; then
@@ -56,4 +58,9 @@ src_install() {
 		cd ./eibd/client/python
 		emake DESTDIR="${D}" install || die "could not install python module"
 	fi
+}
+
+pkg_preinst() {
+	enewuser eibd
+	enewgroup eibd
 }

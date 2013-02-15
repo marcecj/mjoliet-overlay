@@ -3,7 +3,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-pidfile="/tmp/eibd.pid"
+pidfile="/run/eibd/eibd.pid"
 command="/usr/bin/eibd"
 command_args="${EIBD_ARGS} ${EIBD_URL} --pid-file=${pidfile} -d${EIBD_LOGFILE}"
 start_stop_daemon_args="-u ${EIBD_USER}"
@@ -12,4 +12,9 @@ description="Daemon for accessing the EIB/KNX bus"
 depend() {
 	need localmount
 	need net
+}
+
+start_pre() {
+	checkpath --directory --owner ${EIBD_USER} --mode 0774 ${pidfile%/*}
+	checkpath --file --owner ${EIBD_USER} --mode 0664 ${EIBD_LOGFILE}
 }

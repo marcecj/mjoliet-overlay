@@ -1,0 +1,12 @@
+--- src/Makefile.am~	2013-01-19 21:02:00.000000000 +0100
++++ src/Makefile.am	2013-04-08 00:43:29.088730265 +0200
+@@ -46,8 +46,9 @@
+ # configurations per library
+ if ALSA
+ pd_CFLAGS += -DUSEAPI_ALSA
+ pd_SOURCES += s_audio_alsa.c s_audio_alsamm.c s_midi_alsa.c
++LIBS += -lasound
+ endif
+ 
+ if COREAUDIO
+ LIBS += -framework CoreAudio -framework CoreMIDI \

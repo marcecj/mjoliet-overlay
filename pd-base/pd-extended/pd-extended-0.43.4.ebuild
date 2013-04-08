@@ -97,6 +97,10 @@ src_install() {
 	insinto /usr/include/pdextended || die "can't insinto"
 	doheader m_pd.h m_imp.h g_canvas.h s_stuff.h g_all_guis.h || die "no doheader"
 
+	# install built-in documentation
+	cd "${S}/pd"
+	emake DESTDIR="${D}" prefix="/usr" install-data-am
+
 	# install externals
 	cd "${S}/externals"
 	for external_useflag in ${IUSE_PD_EXTERNALS}; do

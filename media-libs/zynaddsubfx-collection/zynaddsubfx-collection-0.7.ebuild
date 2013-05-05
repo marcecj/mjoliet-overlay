@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 
 IUSE=""
-RDEPEND="|| ( >=media-sound/zynaddsubfx-2.2.1-r4 media-sound/yoshimi )"
+RDEPEND="|| ( media-sound/zynaddsubfx media-sound/yoshimi )"
 DEPEND="${RDEPEND}"
 
 src_unpack(){

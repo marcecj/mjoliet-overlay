@@ -15,9 +15,9 @@ MY_P="${P/scikits_/scikits.}"
 
 DESCRIPTION="Audiolab is a python package for audio file IO using numpy arrays."
 HOMEPAGE="http://www.ar.media.kyoto-u.ac.jp/members/david/softwares/audiolab/ http://pypi.python.org/pypi/scikits.audiolab/"
-SRC_URI="http://pypi.python.org/packages/source/s/scikits.audiolab/${MY_P}.tar.gz"
+SRC_URI="mirror://pypi/s/scikits.audiolab/${MY_P}.tar.gz"
 
-LICENSE="LGPL"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="alsa"

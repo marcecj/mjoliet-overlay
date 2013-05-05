@@ -8,7 +8,7 @@ DESCRIPTION="live loop-based MIDI software sequencer"
 HOMEPAGE="https://harmonyseq.wordpress.com/"
 SRC_URI="http://launchpad.net/harmonyseq/stable/${PV}/+download/${P}.tar.gz"
 
-LICENSE=""
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""

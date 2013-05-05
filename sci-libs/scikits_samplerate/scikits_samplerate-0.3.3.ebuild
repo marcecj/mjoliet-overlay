@@ -14,9 +14,9 @@ MY_P="${P/scikits_/scikits.}"
 
 DESCRIPTION="A python module for high quality audio resampling."
 HOMEPAGE="http://www.ar.media.kyoto-u.ac.jp/members/david/softwares/samplerate/ http://pypi.python.org/pypi/scikits.samplerate/"
-SRC_URI="http://pypi.python.org/packages/source/s/scikits.samplerate/${MY_P}.tar.gz"
+SRC_URI="mirror://pypi/s/scikits.samplerate/${MY_P}.tar.gz"
 
-LICENSE="LGPL"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""

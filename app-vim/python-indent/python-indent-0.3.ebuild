@@ -11,6 +11,7 @@ inherit vim-plugin
 
 DESCRIPTION="vim plugin: This indentation script for python tries to match more closely what is suggested in PEP 8."
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=974"
+# NOTE: I couldn't find license information anywhere, perhaps ask the author
 LICENSE=""
 KEYWORDS="~amd64"
 IUSE=""

@@ -11,7 +11,7 @@ inherit vim-plugin
 
 DESCRIPTION="vim plugin: Indent Guides is a plugin for visually displaying indent levels in Vim."
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=3361"
-LICENSE=""
+LICENSE="MIT"
 KEYWORDS="~amd64"
 IUSE=""
 SRC_URI="http://www.vim.org/scripts/download_script.php?src_id=14963 -> indent-guides-1.4.tar.gz"

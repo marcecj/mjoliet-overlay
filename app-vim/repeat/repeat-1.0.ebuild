@@ -10,8 +10,8 @@ RESTRICT="mirror"
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: use the repeat command (.) with supported plugins"
-HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=8206"
-LICENSE=""
+HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=2136"
+LICENSE="vim"
 KEYWORDS="~amd64"
 IUSE=""
 # SRC_URI="http://www.vim.org/scripts/download_script.php?src_id=8206 -> repeat.vim"

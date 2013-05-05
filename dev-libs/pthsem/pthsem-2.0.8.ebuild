@@ -6,7 +6,7 @@ DESCRIPTION="extended version of GNU pth (user mode multi threading library)"
 HOMEPAGE="http://www.auto.tuwien.ac.at/~mkoegler/index.php/pth"
 SRC_URI="http://www.auto.tuwien.ac.at/~mkoegler/pth/pthsem_${PV}.tar.gz"
 
-LICENSE="LGPL"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""

@@ -9,9 +9,9 @@ RESTRICT="mirror"
 #VIM_PLUGIN_VIM_VERSION="7.0"
 inherit vim-plugin
 
-DESCRIPTION="vim plugin: "
-HOMEPAGE="http://www.vim.org/scripts/script.php?script_id="
-LICENSE=""
+DESCRIPTION="vim plugin: Python documentation view and search tool (uses pydoc)"
+HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=910"
+LICENSE="GPL-2+"
 KEYWORDS="~amd64"
 IUSE=""
 SRC_URI="http://www.vim.org/scripts/download_script.php?src_id=12812 -> ${P}.vim"

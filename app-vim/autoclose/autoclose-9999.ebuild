@@ -13,7 +13,7 @@ HOMEPAGE="http://townk.github.com/vim-autoclose/"
 EGIT_REPO_URI="https://github.com/Townk/vim-autoclose.git"
 unset SRC_URI
 
-LICENSE="Vim"
+LICENSE="vim"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""

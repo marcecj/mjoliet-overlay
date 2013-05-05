@@ -1,17 +1,18 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI="5"
 
 RESTRICT="mirror"
 
-inherit eutils python-distutils-ng
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-PYTHON_COMPAT="python2_5 python2_6 python2_7"
+inherit eutils distutils-r1
+
 DESCRIPTION="A simple metronome with an easy-to-use GTK interface."
 HOMEPAGE="http://das.nasophon.de/gtklick/"
-SRC_URI="http://das.nasophon.de/download/gtklick-0.6.4.tar.gz"
+SRC_URI="http://das.nasophon.de/download/${P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -19,8 +20,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="media-sound/klick[osc]
-		media-libs/pyliblo
-		dev-python/pygtk"
+	media-libs/pyliblo[${PYTHON_USEDEP}]
+	dev-python/pygtk[${PYTHON_USEDEP}]
+	${PYTHON_DEPS}"
 RDEPEND="${DEPEND}"
 
 python_prepare_all() {

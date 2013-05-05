@@ -13,7 +13,7 @@ inherit vim-plugin distutils eutils
 
 DESCRIPTION="Ropevim is a plugin for performing python refactorings in vim. It uses rope library."
 HOMEPAGE="http://rope.sourceforge.net/ropevim.html"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="~amd64"
 IUSE=""
 SRC_URI="http://sourceforge.net/projects/rope/files/${PN}/${PV}/${P}.tar.gz/download

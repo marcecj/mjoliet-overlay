@@ -1,0 +1,13 @@
+--- Makefile	2013-05-12 15:58:09.163970957 +0200
++++ Makefile.new	2013-05-12 15:57:43.841236374 +0200
+@@ -68,9 +68,9 @@
+ 	mkdir -p $(prefix)/include/faust/
+ 	mkdir -p $(prefix)/lib/faust
+ 	install compiler/faust $(prefix)/bin/
+ 	install compiler/libfaust.a $(prefix)/lib/faust
+-	install compiler/libfaust.dylib $(prefix)/lib/faust
++	([ -e compiler/libfaust.dylib ] && install compiler/libfaust.dylib $(prefix)/lib/faust) || echo libfaust.dylib not available
+ 	cp compiler/libfaust.h  $(prefix)/include/faust/
+ 	cp compiler/generator/llvm-dsp.h  $(prefix)/include/faust/
+ 	# install architecture and faust library files
+ 	cp architecture/*.c $(prefix)/lib/faust/

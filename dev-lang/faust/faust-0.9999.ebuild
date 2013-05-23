@@ -23,6 +23,7 @@ DEPEND="sys-apps/sed"
 
 EGIT_REPO_URI="git://git.code.sf.net/p/faudiostream/code"
 EGIT_BRANCH="master"
+EGIT_PROJECT="faust"
 
 src_install() {
 	emake install PREFIX="${EPREFIX}/usr" DESTDIR="${D}"

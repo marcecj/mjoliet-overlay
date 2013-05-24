@@ -27,10 +27,6 @@ EGIT_REPO_URI="git://git.code.sf.net/p/faudiostream/code"
 EGIT_BRANCH="faust2"
 EGIT_PROJECT="faust2"
 
-src_prepare() {
-	epatch "${FILESDIR}/faust_1.9999_Makefile.patch"
-}
-
 src_install() {
     emake install PREFIX="${EPREFIX}/usr" DESTDIR="${D}"
 

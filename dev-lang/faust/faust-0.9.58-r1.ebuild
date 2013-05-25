@@ -36,12 +36,12 @@ src_install() {
 	dodoc README WHATSNEW
 
 	if use doc ; then
-	    dodoc documentation/*.pdf "documentation/additional documentation" || die "install doc failed"
+		dodoc documentation/*.pdf "documentation/additional documentation" || die "install doc failed"
 	fi
 
 	if use examples ; then
-	    insinto /usr/share/"${P}"/examples
-	    doins examples/* || die "install examples failed"
+		insinto /usr/share/"${P}"/examples
+		doins examples/* || die "install examples failed"
 	fi
 
 	if use vim; then

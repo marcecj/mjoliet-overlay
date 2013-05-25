@@ -20,12 +20,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-    dev-texlive/texlive-latexextra
-    dev-texlive/texlive-mathextra
-    dev-texlive/texlive-xetex
-    dev-libs/libxslt
-    app-text/docbook-xml-dtd
-    dev-texlive/texlive-pictures"
+	dev-texlive/texlive-latexextra
+	dev-texlive/texlive-mathextra
+	dev-texlive/texlive-xetex
+	dev-libs/libxslt
+	app-text/docbook-xml-dtd
+	dev-texlive/texlive-pictures"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

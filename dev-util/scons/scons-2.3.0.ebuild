@@ -13,7 +13,7 @@ DESCRIPTION="Extensible Python-based build utility"
 HOMEPAGE="http://www.scons.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	doc? ( http://www.scons.org/doc/${PV}/PDF/${PN}-user.pdf -> ${P}-user.pdf
-	       http://www.scons.org/doc/${PV}/HTML/${PN}-user.html -> ${P}-user.html )"
+		   http://www.scons.org/doc/${PV}/HTML/${PN}-user.html -> ${P}-user.html )"
 
 LICENSE="MIT"
 SLOT="0"

@@ -8,7 +8,7 @@ RESTRICT="mirror"
 
 inherit eutils git-2
 
-IUSE="doc examples vim"
+IUSE="libfaust doc examples vim"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -26,6 +26,18 @@ RDEPEND="${DEPEND}
 EGIT_REPO_URI="git://git.code.sf.net/p/faudiostream/code"
 EGIT_BRANCH="faust2"
 EGIT_PROJECT="faust2"
+
+src_prepare() {
+	epatch "${FILESDIR}/faust-1.9999_build_libfaust.patch"
+}
+
+src_compile() {
+	emake all
+
+	if use libfaust; then
+		emake lib
+	fi
+}
 
 src_install() {
     emake install PREFIX="${EPREFIX}/usr" DESTDIR="${D}"

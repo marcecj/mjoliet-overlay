@@ -37,6 +37,10 @@ src_compile() {
 	if use libfaust; then
 		emake lib
 	fi
+
+	if use doc; then
+		emake doc
+	fi
 }
 
 src_install() {
@@ -46,6 +50,7 @@ src_install() {
 
     if use doc ; then
         dodoc documentation/*.pdf "documentation/additional documentation" || die "install doc failed"
+		dodoc -r dox/html || die "install doxygen failed"
     fi
 
     if use examples ; then

@@ -29,6 +29,9 @@ EGIT_PROJECT="faust2"
 
 src_prepare() {
 	epatch "${FILESDIR}/faust-1.9999_build_libfaust.patch"
+	epatch "${FILESDIR}/faust-1.9999_llvm-c-dsp_remove_cpp_types.patch"
+	epatch "${FILESDIR}/faust-1.9999_llvm-c-dsp_add_extern_c.patch"
+	epatch "${FILESDIR}/faust-1.9999_llvm-c-dsp_fix_initcdspinstance_def.patch"
 }
 
 src_compile() {

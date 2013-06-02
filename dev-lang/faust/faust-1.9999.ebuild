@@ -29,6 +29,7 @@ EGIT_PROJECT="faust2"
 
 src_prepare() {
 	epatch "${FILESDIR}/faust-1.9999_build_libfaust.patch"
+	epatch "${FILESDIR}/faust-1.9999_remove_t_flag_from_main.patch"
 }
 
 src_compile() {

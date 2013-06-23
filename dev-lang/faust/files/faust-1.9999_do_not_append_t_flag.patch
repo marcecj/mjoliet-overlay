@@ -1,0 +1,33 @@
+--- compiler/main.cpp.orig	2013-06-23 18:13:07.235173328 +0200
++++ compiler/main.cpp	2013-06-23 18:13:37.557185761 +0200
+@@ -21,28 +21,17 @@
+ #include "global.hh"
+ #include "export.hh"
+ #include "exception.hh"
+ 
+-int main(int argc, char* argv[])
++int main(int argc, const char* argv[])
+ {
+     int res = 0;
+     gGlobal = NULL;
+    
+     try {
+         global::allocate();
+         
+-        // Add time-out argument
+-        int argc1 = argc + 2;
+-        const char* argv1[32];
+-		assert(argc1 < 32);
+-        int i;
+-        for (i = 0; i < argc; i++) {
+-            argv1[i] = argv[i];
+-        }
+-        argv1[i++] = "-t";
+-        argv1[i++] = "120";
+-
+-        res = compile_faust_internal(argc1, argv1, "", "", 0, 0);
++        res = compile_faust_internal(argc, argv, "", "", 0, 0);
+     } catch (faustexception& e) {
+         e.PrintMessage();
+     }
+     

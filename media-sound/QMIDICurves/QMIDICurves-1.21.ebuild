@@ -25,8 +25,8 @@ export S="${WORKDIR}/${MY_S}"
 export pro_file="${PN}.pro"
 
 DEPEND="x11-libs/qwt:5
-		x11-libs/qt-core
-		x11-libs/qt-gui"
+		dev-qt/qtcore
+		dev-qt/qtgui"
 RDEPEND="${DEPEND}"
 
 DOCS="README RELEASES"

@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -15,14 +15,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="alsa dbus debug doc freebob ieee1394 32bit"
 
-RDEPEND="dev-util/pkgconfig"
+RDEPEND=""
 
 DEPEND="${RDEPEND}
 	alsa? ( >=media-libs/alsa-lib-0.9.1 )
 	freebob? ( sys-libs/libfreebob !media-libs/libffado )
 	doc? ( app-doc/doxygen )
 	dbus? ( sys-apps/dbus )
-	ieee1394? ( media-libs/libffado !sys-libs/libfreebob )"
+	ieee1394? ( media-libs/libffado !sys-libs/libfreebob )
+	virtual/pkgconfig"
 
 S="${WORKDIR}/jack-${PV}/jack-${PV}"
 

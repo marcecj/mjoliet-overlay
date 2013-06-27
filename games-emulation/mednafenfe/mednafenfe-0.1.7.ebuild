@@ -24,8 +24,3 @@ RDEPEND="games-emulation/mednafen
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
-
-pkg_postinst() {
-	elog "If you would like to have an integrated help viewer, please emerge:"
-	elog "	dev-python/gtkmozembed-python"
-}

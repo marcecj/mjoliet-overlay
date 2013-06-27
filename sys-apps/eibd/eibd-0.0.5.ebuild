@@ -4,7 +4,7 @@
 
 EAPI="4"
 
-inherit autotools user python
+inherit user python
 
 PYTHON_DEPEND="python?2"
 

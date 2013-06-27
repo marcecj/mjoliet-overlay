@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1-r2.ebuild,v 1.1 2009/07/21 17:40:19 ssuominen Exp $
 
 EAPI=4
-inherit autotools eutils fdo-mime
+inherit eutils fdo-mime
 
 IUSE=""
 

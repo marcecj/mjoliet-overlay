@@ -21,10 +21,9 @@ VIM_PLUGIN_HELPTEXT=""
 VIM_PLUGIN_HELPURI=""
 VIM_PLUGIN_MESSAGES=""
 
-
 S="${WORKDIR}"
 src_unpack() {
-	cp ${DISTDIR}/${A} ${WORKDIR}/${PN}.vim
+	cp "${DISTDIR}/${A}" "${WORKDIR}/${PN}.vim"
 }
 
 src_install() {

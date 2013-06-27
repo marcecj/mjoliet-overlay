@@ -19,7 +19,7 @@ SRC_URI="http://www.vim.org/scripts/download_script.php?src_id=12804 -> ${P}.vim
 
 S=${WORKDIR}
 src_unpack() {
-	cp ${DISTDIR}/${A} ${WORKDIR}/${PN}.vim
+	cp "${DISTDIR}/${A}" "${WORKDIR}/${PN}.vim"
 }
 
 src_install() {

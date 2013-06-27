@@ -33,7 +33,7 @@ src_compile() {
 	#autoreconf
 
 	econf $(use_with jack) || die
-	sed -i '/GCONF_CONFIG_SOURCE/d' ${S}/Makefile || die "patching Makefile"
+	sed -i '/GCONF_CONFIG_SOURCE/d' "${S}"/Makefile || die "patching Makefile"
 	emake -j1 || die "emake failed"
 }
 
@@ -42,12 +42,11 @@ src_install() {
 	dodoc AUTHORS ChangeLog README TODO
 }
 
-
 pkg_postinst() {
 	# More or less copied from gnome2_gconf_install, which didn't work here
 	export GCONF_CONFIG_SOURCE=xml::/etc/gconf/gconf.xml.defaults
 	einfo "Installing GNOME 2 GConf schemas"
-	${ROOT}/usr/bin/gconftool-2 --makefile-install-rule ${S}/tutka.schemas 1>/dev/null
+	"${ROOT}"/usr/bin/gconftool-2 --makefile-install-rule "${S}"/tutka.schemas 1>/dev/null
 }
 
 #pkg_postrm() {

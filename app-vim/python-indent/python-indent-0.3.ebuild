@@ -21,7 +21,7 @@ SRC_URI="http://www.vim.org/scripts/download_script.php?src_id=4316 -> ${P}.vim"
 S="${WORKDIR}"
 
 src_unpack() {
-	cp ${DISTDIR}/${A} ${WORKDIR}/python.vim
+	cp "${DISTDIR}/${A}" "${WORKDIR}/python.vim"
 }
 
 src_install() {
@@ -33,4 +33,3 @@ src_install() {
 # VIM_PLUGIN_HELPTEXT=""
 # VIM_PLUGIN_HELPURI=""
 # VIM_PLUGIN_MESSAGES=""
-

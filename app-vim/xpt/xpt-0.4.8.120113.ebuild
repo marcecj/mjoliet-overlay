@@ -15,7 +15,6 @@ LICENSE="as-is"
 KEYWORDS="~amd64"
 IUSE=""
 
-
 SRC_URI="http://www.vim.org/scripts/download_script.php?src_id=17190
 	-> ${P}-ac4a53d.tar.gz"
 
@@ -26,4 +25,3 @@ VIM_PLUGIN_HELPFILES="xptemplate.txt"
 # VIM_PLUGIN_HELPTEXT=""
 # VIM_PLUGIN_HELPURI=""
 # VIM_PLUGIN_MESSAGES=""
-

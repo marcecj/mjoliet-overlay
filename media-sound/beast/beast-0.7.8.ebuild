@@ -31,7 +31,6 @@ DEPEND="${RDEPEND}
 	media-libs/ladspa-sdk
 	>=dev-util/intltool-0.35"
 
-
 src_prepare() {
 	epatch "${FILESDIR}/100_deprecated.diff"
 	epatch "${FILESDIR}/210_volatile.diff"

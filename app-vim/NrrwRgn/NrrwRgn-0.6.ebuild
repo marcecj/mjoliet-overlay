@@ -25,7 +25,7 @@ SRC_URI="http://www.vim.org/scripts/download_script.php?src_id=12938 -> ${P}.vba
 S="${WORKDIR}"
 
 src_unpack() {
-	cp ${DISTDIR}/${A} ${S}/${A}
+	cp "${DISTDIR}/${A}" "${S}/${A}"
 }
 
 # src_install() {

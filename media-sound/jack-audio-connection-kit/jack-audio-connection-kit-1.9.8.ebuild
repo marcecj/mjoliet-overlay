@@ -49,7 +49,6 @@ pkg_setup() {
 
 src_prepare() {
 # Fix for waf to use python2, since waf is not compatible with phyton3
-cd ${S}
 	for x in $(grep -r "/usr/bin/env python" * | cut -f1 -d":" ); do
 		einfo "Tweaking $x for python2..."
 		sed -e "s:/usr/bin/env python:/usr/bin/env python2:g" -i $x

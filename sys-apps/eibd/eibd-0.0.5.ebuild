@@ -44,8 +44,8 @@ src_configure() {
 src_install() {
 	if use eibd; then
 		emake DESTDIR="${D}" install || die "emake install failed"
-		doinitd ${FILESDIR}/init.d/eibd
-		doconfd ${FILESDIR}/conf.d/eibd
+		doinitd "${FILESDIR}"/init.d/eibd
+		doconfd "${FILESDIR}"/conf.d/eibd
 	fi
 
 	if use python; then

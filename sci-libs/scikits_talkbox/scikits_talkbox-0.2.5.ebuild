@@ -37,4 +37,3 @@ src_install(){
 	}
 	python_execute_function -q remove_scikits
 }
-

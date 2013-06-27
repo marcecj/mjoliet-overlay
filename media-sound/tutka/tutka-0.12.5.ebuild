@@ -1,4 +1,4 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /cvsroot/jacklab/gentoo/media-sound/tutka/tutka-0.12.3.ebuild,v 1.1 2006/04/10 17:19:53 gimpel Exp $
 
@@ -19,6 +19,7 @@ DEPEND=">=media-libs/alsa-lib-0.9.0
 	>=dev-libs/libxml2-2.4.16
 	>=gnome-base/libglade-2.4.2
 	jack? ( >=media-sound/jack-audio-connection-kit-0.90.0 )"
+RDEPEND="${DEPEND}"
 
 #src_unpack() {
 #	unpack ${A}

@@ -20,8 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=media-libs/liblo-0.26
-	${PYTHON_DEPS}"
+RDEPEND=">=media-libs/liblo-0.26"
 DEPEND="${RDEPEND}
 	dev-python/cython"
 

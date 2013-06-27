@@ -21,8 +21,7 @@ IUSE=""
 
 DEPEND="media-sound/klick[osc]
 	media-libs/pyliblo[${PYTHON_USEDEP}]
-	dev-python/pygtk[${PYTHON_USEDEP}]
-	${PYTHON_DEPS}"
+	dev-python/pygtk[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
 
 python_prepare_all() {

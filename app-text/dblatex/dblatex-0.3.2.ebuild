@@ -1,14 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
-PYTHON_DEPEND="*"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+EAPI="5"
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 PYTHON_MODNAME="dbtexmf"
 
-inherit distutils eutils
+inherit distutils-r1 eutils
 
 DESCRIPTION="Transform DocBook using TeX macros"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -36,7 +34,7 @@ src_prepare() {
 }
 
 src_install() {
-	distutils_src_install || die "distutils install failed"
+	distutils-r1_src_install || die "distutils install failed"
 
 	dobin "${S}"/scripts/dblatex || die "dobin failed"
 }

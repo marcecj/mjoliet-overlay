@@ -1,14 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI="5"
 
 RESTRICT="mirror"
 
-inherit eutils distutils vim-doc python
+PYTHON_COMPAT=( python{3_1,3_2,3_3} )
 
-PYTHON_DEPEND="3"
+inherit eutils distutils-r1 vim-doc
 
 DESCRIPTION="A debugger frontend for gvim written in python"
 HOMEPAGE="http://pyclewn.wiki.sourceforge.net/"
@@ -26,19 +26,9 @@ DEPEND="|| (
 RDEPEND="${DEPEND}
 	sys-devel/gdb"
 
-S="$S.py3"
+S="${S}.py3"
 
 src_prepare() {
 	sed -i -e "/vim_features/ d"  "${S}/setup.py" || die "sed failed!"
 	sed -i -e "/build_vimhelp/ d" "${S}/setup.py" || die "sed failed!"
-}
-
-pkg_setup() {
-	python_set_active_version 3
-	python_pkg_setup
-}
-
-pkg_postinst() {
-	update_vim_helptags
-	distutils_pkg_postinst
 }

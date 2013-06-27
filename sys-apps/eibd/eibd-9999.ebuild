@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="4"
+EAPI="5"
 
-inherit autotools python user git-2
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-PYTHON_DEPEND="python?2"
+inherit autotools python-r1 user git-2
 
 DESCRIPTION="Provides an interface to the EIB / KNX bus"
 HOMEPAGE="http://www.auto.tuwien.ac.at/~mkoegler/index.php/eibd"
@@ -18,7 +18,8 @@ IUSE="eibd ft12 pei16 tpuart pei16s tpuarts eibnetip eibnetiptunnel eibnetipserv
 usb groupcache php python java tools"
 
 DEPEND="dev-libs/pthsem"
-RDEPEND="
+RDEPEND="${DEPEND}
+	python? ( ${PYTHON_DEPS} )
 	php? ( virtual/php )
 "
 

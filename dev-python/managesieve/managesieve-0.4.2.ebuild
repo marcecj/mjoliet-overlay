@@ -1,12 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="3"
+EAPI="5"
 
 RESTRICT="mirror"
 
-inherit python distutils
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+inherit distutils-r1
 
 DESCRIPTION="A ManageSieve client library for remotely managing Sieve scripts."
 HOMEPAGE="http://python-managesieve.origo.ethz.ch/"

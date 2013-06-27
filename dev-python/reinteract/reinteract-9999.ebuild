@@ -1,10 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="2"
+EAPI="5"
 
-inherit python git autotools eutils
+PYTHON_COMPAT=( python{2_6,2_7} )
+inherit python-single-r1 git-2 autotools eutils
 
 DESCRIPTION="An interactive Python shell written in PyGtk"
 HOMEPAGE="http://www.reinteract.org/"
@@ -17,16 +18,19 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-python/numpy
-		dev-python/matplotlib
-		dev-python/pygtk"
-RDEPEND="media-sound/sox"
+DEPEND="dev-python/numpy[${PYTHON_USEDEP}]
+		dev-python/matplotlib[${PYTHON_USEDEP}]
+		dev-python/pygtk[${PYTHON_USEDEP}]"
+RDEPEND="media-sound/sox
+		${DEPEND}"
 
 src_prepare() {
 	eautoreconf || die "autoreconf failed"
 }
 
 src_configure() {
+	# tell configure which python we want
+	local PYTHON="${EPYTHON}"
 	econf || die "failed to econf ${PN}"
 }
 

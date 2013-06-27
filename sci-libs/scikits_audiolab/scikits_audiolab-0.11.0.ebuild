@@ -1,15 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="3"
+EAPI="5"
 RESTRICT="mirror"
 
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 
-inherit distutils
+inherit distutils-r1
 
 MY_P="${P/scikits_/scikits.}"
 
@@ -22,20 +20,20 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="alsa"
 
-RDEPEND=">=dev-python/numpy-1.2
-	sci-libs/scikits"
+RDEPEND=">=dev-python/numpy-1.2[${PYTHON_USEDEP}]
+	sci-libs/scikits[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	media-libs/libsndfile
-	dev-python/setuptools
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	alsa? ( media-libs/alsa-lib )"
 
 S="${WORKDIR}/${MY_P}"
 
 src_install(){
-	distutils_src_install
+	distutils-r1_src_install
 	# taken from other scikits ebuilds
 	remove_scikits() {
 		rm -f "${ED}"$(python_get_sitedir)/scikits/__init__.py || die
 	}
-	python_execute_function -q remove_scikits
+	python_parallel_foreach_impl remove_scikits
 }

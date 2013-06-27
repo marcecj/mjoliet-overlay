@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -7,7 +7,7 @@ EAPI=4
 RESTRICT="mirror"
 
 #VIM_PLUGIN_VIM_VERSION="7.0"
-inherit git vim-plugin
+inherit git-2 vim-plugin
 
 DESCRIPTION="vim plugin: Use of Clang for completing C, C++, Objective-C and Objective-C++"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=3302"

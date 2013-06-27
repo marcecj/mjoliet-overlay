@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -26,6 +26,7 @@ SRC_URI="http://sourceforge.net/projects/rope/files/${PN}/${PV}/${P}.tar.gz/down
 
 DEPEND="dev-lang/python
 dev-python/rope"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	insinto /usr/share/vim/vimfiles/plugin/

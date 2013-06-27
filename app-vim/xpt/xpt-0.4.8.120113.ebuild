@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -11,7 +11,7 @@ inherit vim-plugin
 
 DESCRIPTION="vim plugin: XP's Snippet Template engine for vim"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=2611"
-LICENSE="as-is"
+LICENSE="GPL-3"
 KEYWORDS="~amd64"
 IUSE=""
 

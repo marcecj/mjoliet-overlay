@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -9,7 +9,7 @@ RESTRICT="mirror"
 #VIM_PLUGIN_VIM_VERSION="7.0"
 inherit vim-plugin
 
-DESCRIPTION="vim plugin: This indentation script for python tries to match more closely what is suggested in PEP 8."
+DESCRIPTION="vim plugin: This indentation script for python tries to match more closely the suggestions in PEP 8."
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=974"
 # NOTE: I couldn't find license information anywhere, perhaps ask the author
 LICENSE=""

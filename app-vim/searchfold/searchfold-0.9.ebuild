@@ -8,7 +8,7 @@ EAPI=4
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: fold away lines not matching the last search pattern"
-HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=2302"
+HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=2521"
 # NOTE: no license information available, maybe ask the author
 LICENSE=""
 KEYWORDS="~amd64"

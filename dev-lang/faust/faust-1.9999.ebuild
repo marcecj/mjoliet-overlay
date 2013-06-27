@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -14,12 +14,13 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 
-DESCRIPTION="Faust AUdio STreams is a functional programming language for realtime audio plugins and applications development. The Faust compiler translates signal processing specifications into C++ code."
+DESCRIPTION="Faust AUdio STreams is a functional programming language for realtime audio."
 HOMEPAGE="http://faust.grame.fr"
 
-DEPEND="sys-apps/sed
-		sys-devel/llvm"
-RDEPEND="${DEPEND}
+COMMON_DEPEND="sys-devel/llvm"
+RDEPEND="${COMMON_DEPEND}
+		sys-apps/sed"
+DEPEND="${COMMON_DEPEND}
 		 sys-devel/bison
 		 sys-devel/flex"
 

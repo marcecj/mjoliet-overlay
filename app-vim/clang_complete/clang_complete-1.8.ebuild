@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -15,7 +15,7 @@ LICENSE="BSD"
 KEYWORDS="~amd64"
 IUSE=""
 EGIT_REPO_URI="git://github.com/Rip-Rip/clang_complete.git"
-clang_complete_LIVE_COMMIT="v1.8"
+EGIT_COMMIT="v1.8"
 unset SRC_URI
 
 VIM_PLUGIN_HELPFILES=""

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
 RESTRICT="mirror"
 
@@ -24,8 +24,7 @@ S="${WORKDIR}/${PN}"
 src_install() {
 	dobin bin/cxxtestgen
 
-	insinto /usr/include/
-	doins -r cxxtest
+	doheader -r cxxtest
 
 	dodoc README NOTES Versions
 	if use doc; then

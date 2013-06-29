@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>marcec@gmx.de</email>
+		<name>Marc Joliet</name>
+	</maintainer>
+	<use>
+		<flag name="libfaust"> Additionally install the FAUST compiler as a shared library </flag>
+	</use>
+</pkgmetadata>

@@ -8,7 +8,7 @@ RESTRICT="mirror"
 
 inherit eutils
 
-IUSE="doc examples vim"
+IUSE="doc examples vim-syntax"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -44,7 +44,7 @@ src_install() {
 		doins examples/* || die "install examples failed"
 	fi
 
-	if use vim; then
+	if use vim-syntax; then
 		insinto /usr/share/vim/vimfiles/syntax
 		doins syntax-highlighting/faust.vim
 	fi

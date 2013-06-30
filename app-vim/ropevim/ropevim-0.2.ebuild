@@ -7,7 +7,7 @@ EAPI="3"
 RESTRICT="mirror"
 
 #VIM_PLUGIN_VIM_VERSION="7.0"
-inherit vim-plugin distutils eutils
+inherit vim-plugin distutils
 
 DESCRIPTION="Ropevim is a plugin for performing python refactorings in vim. It uses rope library."
 HOMEPAGE="http://rope.sourceforge.net/ropevim.html"

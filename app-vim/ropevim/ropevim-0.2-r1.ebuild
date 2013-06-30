@@ -9,8 +9,6 @@ RESTRICT="mirror"
 #VIM_PLUGIN_VIM_VERSION="7.0"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 DISTUTILS_SINGLE_IMPL=1
-# FIXME: damn it, this is some weird mixture of python and vim code, some of
-# which uses distutils to install.
 inherit vim-plugin distutils-r1 eutils
 
 DESCRIPTION="Ropevim is a plugin for performing python refactorings in vim. It uses rope library."

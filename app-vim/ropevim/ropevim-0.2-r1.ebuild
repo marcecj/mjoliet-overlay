@@ -9,7 +9,7 @@ RESTRICT="mirror"
 #VIM_PLUGIN_VIM_VERSION="7.0"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
 DISTUTILS_SINGLE_IMPL=1
-inherit vim-plugin distutils-r1
+inherit distutils-r1 vim-plugin
 
 DESCRIPTION="Ropevim is a plugin for performing python refactorings in vim. It uses rope library."
 HOMEPAGE="http://rope.sourceforge.net/ropevim.html"

@@ -22,6 +22,12 @@ RDEPENDS="
 	|| ( net-misc/curl net-misc/wget )
 "
 
+src_install() {
+	dodoc autoload/sample_vimrc_for_new_users.vim
+	rm -f autoload/sample_vimrc_for_new_users.vim
+	vim-plugin_src_install
+}
+
 post_postinst() {
 	vim-plugin_pkg_postinst
 

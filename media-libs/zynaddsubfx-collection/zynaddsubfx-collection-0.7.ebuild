@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+
+EAPI="5"
 
 inherit unpacker
 RESTRICT="mirror"
@@ -15,6 +17,8 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 RDEPEND="|| ( media-sound/zynaddsubfx media-sound/yoshimi )"
 DEPEND="${RDEPEND}"
+
+S="${WORKDIR}"
 
 src_unpack(){
 	unpack ${A}

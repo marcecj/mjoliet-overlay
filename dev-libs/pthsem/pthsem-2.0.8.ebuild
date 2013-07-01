@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+
+EAPI="5"
 
 DESCRIPTION="extended version of GNU pth (user mode multi threading library)"
 HOMEPAGE="http://www.auto.tuwien.ac.at/~mkoegler/index.php/pth"

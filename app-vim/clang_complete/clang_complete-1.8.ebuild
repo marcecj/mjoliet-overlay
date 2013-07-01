@@ -24,3 +24,7 @@ VIM_PLUGIN_HELPURI=""
 VIM_PLUGIN_MESSAGES=""
 
 RDEPEND="sys-devel/clang"
+
+src_prepare() {
+	rm "${S}/Makefile"
+}

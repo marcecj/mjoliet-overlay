@@ -9,7 +9,7 @@ inherit vim-plugin git-2
 
 DESCRIPTION="vim plugin: "
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=2905"
-LICENSE=""
+LICENSE="vim.org"
 KEYWORDS="~amd64"
 EGIT_REPO_URI="git://github.com/MarcWeber/vim-addon-manager.git"
 

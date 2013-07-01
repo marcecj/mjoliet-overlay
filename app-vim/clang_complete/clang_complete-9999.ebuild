@@ -25,6 +25,5 @@ VIM_PLUGIN_MESSAGES=""
 RDEPEND="sys-devel/clang"
 
 src_prepare() {
-	rm -r "${S}/.git"
 	rm "${S}/Makefile"
 }

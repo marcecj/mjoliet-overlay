@@ -22,7 +22,3 @@ VIM_PLUGIN_HELPFILES=""
 VIM_PLUGIN_HELPTEXT=""
 VIM_PLUGIN_HELPURI=""
 VIM_PLUGIN_MESSAGES=""
-
-src_prepare() {
-	rm -r "${S}/.git" "$S/.gitignore" || die "rm failed"
-}

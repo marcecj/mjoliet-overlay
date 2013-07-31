@@ -24,7 +24,7 @@ SRC_URI="http://sourceforge.net/projects/rope/files/${PN}/${PV}/${P}.tar.gz/down
 # VIM_PLUGIN_HELPURI=""
 # VIM_PLUGIN_MESSAGES=""
 
-DEPEND="dev-python/rope
+DEPEND="dev-python/rope[${PYTHON_USEDEP}]
 	|| ( app-editors/vim[${PYTHON_USEDEP}]
 		 app-editors/gvim[${PYTHON_USEDEP}] )"
 RDEPEND="${DEPEND}"

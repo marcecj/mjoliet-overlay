@@ -31,6 +31,7 @@ EGIT_PROJECT="faust2"
 src_prepare() {
 	epatch "${FILESDIR}/faust-1.9999_build_libfaust.patch"
 	epatch "${FILESDIR}/faust-1.9999_do_not_append_t_flag.patch"
+	epatch "${FILESDIR}/faust-1.9999_fix_llvm-c-dsp_h.patch"
 }
 
 src_compile() {

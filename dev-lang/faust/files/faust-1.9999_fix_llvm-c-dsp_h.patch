@@ -1,0 +1,16 @@
+--- compiler/generator/llvm-c-dsp.h~	2013-08-03 00:15:08.000000000 +0200
++++ compiler/generator/llvm-c-dsp.h	2013-08-03 00:35:25.808000000 +0200
+@@ -34,11 +34,11 @@
+ #endif
+ 
+ /* Opaque types */
+ 
+-typedef struct llvm_dsp_factory {};
++typedef struct {} llvm_dsp_factory;
+ 
+-typedef struct llvm_dsp {};
++typedef struct {} llvm_dsp;
+ 
+ /**
+  * Create a Faust DSP factory from a DSP source code. The source code is either given :
+     - as a .dsp source filename (in which case the 'argc/argv' parameters have to be used)

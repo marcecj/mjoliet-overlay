@@ -7,8 +7,8 @@ EAPI="5"
 inherit eutils
 
 DESCRIPTION="textext is an inkscape extension, which embed re-editable LaTeX objects in SVG drawings"
-HOMEPAGE="http://www.elisanet.fi/ptvirtan/software/textext/"
-SRC_URI="http://www.elisanet.fi/ptvirtan/software/textext/${P}.tar.gz"
+HOMEPAGE="http://pav.iki.fi/software/textext/"
+SRC_URI="http://pav.iki.fi/software/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -19,6 +19,8 @@ RDEPEND=">=media-gfx/inkscape-0.46
 	virtual/latex-base
 	|| ( media-gfx/pdf2svg media-gfx/pstoedit[plotutils] )"
 DEPEND="${RDEPEND}"
+
+S="${WORKDIR}"
 
 src_install() {
 	exeinto /usr/share/inkscape/extensions

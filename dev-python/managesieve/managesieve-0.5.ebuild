@@ -11,7 +11,7 @@ inherit distutils-r1
 
 DESCRIPTION="A ManageSieve client library for remotely managing Sieve scripts."
 HOMEPAGE="http://python-managesieve.origo.ethz.ch/"
-SRC_URI="https://pypi.python.org/packages/source/m/managesieve/${P}.tar.bz2"
+SRC_URI="mirror://pypi/m/managesieve/${P}.tar.bz2"
 
 LICENSE="PYTHON"
 SLOT="0"

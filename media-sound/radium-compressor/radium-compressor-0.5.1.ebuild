@@ -35,7 +35,7 @@ src_prepare() {
 src_compile() {
 	CXX=$(tc-getCXX)
 
-	if [ $(gcc-major-version) -le 4 -o \
+	if [ $(gcc-major-version) -lt 4 -o \
 		\( $(gcc-major-version) -eq 4 -a $(gcc-minor-version) -lt 7 \) ]; then
 		elog "Your version of gcc is too old for radium-compressor, but it"
 		elog "seems you have clang installed, so we will try that instead."

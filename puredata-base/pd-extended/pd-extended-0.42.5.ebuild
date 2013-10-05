@@ -36,7 +36,7 @@ DEPEND="dev-lang/tcl
 	media-libs/libsndfile
 	alsa? ( media-libs/alsa-lib )
 	fftw? ( sci-libs/fftw )
-	hcs? ( dev-libs/libusb )
+	hcs? ( virtual/libusb )
 	jack? ( media-sound/jack-audio-connection-kit )
 	pdogg? ( media-libs/libogg
 		media-libs/libvorbis )

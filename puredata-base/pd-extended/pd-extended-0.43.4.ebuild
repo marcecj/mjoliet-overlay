@@ -112,9 +112,9 @@ src_install() {
 		fi
 	done
 
-	newicon ${S}/packages/linux_make/pd-extended.png pd-extended.png
-	domenu ${FILESDIR}/${PN}.desktop
+	newicon "${S}"/packages/linux_make/pd-extended.png pd-extended.png
+	domenu "${FILESDIR}/${PN}".desktop
 
 	insinto /usr/lib/pd
-	doins -r ${S}/pd/tcl
+	doins -r "${S}"/pd/tcl
 }

@@ -17,7 +17,7 @@ KEYWORDS="~x86 ~amd64"
 DESCRIPTION="Faust AUdio STreams is a functional programming language for realtime audio."
 HOMEPAGE="http://faust.grame.fr"
 
-COMMON_DEPEND="sys-devel/llvm"
+COMMON_DEPEND=">=sys-devel/llvm-3.0"
 RDEPEND="${COMMON_DEPEND}
 		sys-apps/sed"
 DEPEND="${COMMON_DEPEND}

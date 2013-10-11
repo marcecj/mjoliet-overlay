@@ -1,0 +1,13 @@
+--- compiler/Makefile.unix~	2013-10-11 18:48:06.457091791 +0200
++++ compiler/Makefile.unix	2013-10-11 18:52:06.198542226 +0200
+@@ -12,9 +12,9 @@
+ ## On Darwin build both 32 and 64-bits intel versions
+ ifeq ($(system), Darwin)
+ ARCHFLAGS 	:=  -arch i386 -arch x86_64
+ LIBFLAGS	:=
+-CXX 		= clang++
++CXX 		?= clang++
+ CXXFLAGS	= -Wexit-time-destructors -Wglobal-constructors  
+ LIB_EXT        = dylib
+ ## --analyze   -Wall -pedantic
+ #CXXFLAGS	= -Wexit-time-destructors -Wglobal-constructors -stdlib=libc++ 

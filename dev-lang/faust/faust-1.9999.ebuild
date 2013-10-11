@@ -22,6 +22,7 @@ RDEPEND="${COMMON_DEPEND}
 		sys-apps/sed"
 DEPEND="${COMMON_DEPEND}
 		 sys-devel/bison
+		 sys-devel/clang
 		 sys-devel/flex"
 
 EGIT_REPO_URI="git://git.code.sf.net/p/faudiostream/code"

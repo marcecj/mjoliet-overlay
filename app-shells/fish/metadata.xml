@@ -5,7 +5,4 @@
 		<email>marcec@gmx.de</email>
 		<name>Marc Joliet</name>
 	</maintainer>
-	<use>
-		<flag name="lzma"> Support for LZMA and XZ (de)compression algorithms</flag>
-	</use>
 </pkgmetadata>

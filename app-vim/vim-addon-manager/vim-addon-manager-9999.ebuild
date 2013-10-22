@@ -28,7 +28,7 @@ src_install() {
 	vim-plugin_src_install
 }
 
-post_postinst() {
+pkg_postinst() {
 	vim-plugin_pkg_postinst
 
 	elog "Depending on the vim addons you want to install, you might need any"

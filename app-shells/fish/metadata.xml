@@ -5,4 +5,7 @@
 		<email>marcec@gmx.de</email>
 		<name>Marc Joliet</name>
 	</maintainer>
+	<use>
+		<flag name="xz">Support for XZ (de)compression algorithm</flag>
+	</use>
 </pkgmetadata>

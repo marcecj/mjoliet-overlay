@@ -15,12 +15,7 @@ SRC_URI="http://fishshell.com/files/${PV}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
-IUSE="lzma xz X"
-
-# The {backports-,}lzma modules implement both lzma and xz, so you can't have
-# only one or the other
-REQUIRED_USE="lzma? ( xz )
-			  !lzma? ( !xz )"
+IUSE="X"
 
 DEPEND="${PYTHON_DEPS}
 	sys-libs/ncurses
@@ -29,11 +24,11 @@ DEPEND="${PYTHON_DEPS}
 	www-client/htmlview
 	X? ( x11-misc/xsel )"
 RDEPEND="${DEPEND}
-	lzma? ( || (
-				$(python_gen_cond_dep dev-python/backports-lzma python{2_6,2_7,3_2})
-				$(python_gen_useflags python{3_3})
-				) )
-	"
+	|| (
+		$(python_gen_cond_dep dev-python/backports-lzma python{2_6,2_7,3_2})
+		$(python_gen_useflags python{3_3})
+	   )
+"
 
 src_prepare() {
 	epatch "${DISTDIR}"/${P}-docdir.patch #489934

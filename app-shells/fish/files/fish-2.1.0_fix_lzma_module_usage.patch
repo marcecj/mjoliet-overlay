@@ -1,0 +1,16 @@
+diff --git a/share/tools/create_manpage_completions.py b/share/tools/create_manpage_completions.py
+index fb7c770..7b1879d 100755
+--- a/share/tools/create_manpage_completions.py
++++ b/share/tools/create_manpage_completions.py
+@@ -23,9 +23,9 @@ from deroff import Deroffer
+ lzma_available = True
+ try:
+     try:
+-        import backports.lzma as lzma
+-    except ImportError:
+         import lzma
++    except ImportError:
++        from backports import lzma
+ except ImportError:
+     lzma_available = False
+ 

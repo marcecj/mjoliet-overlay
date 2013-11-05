@@ -37,6 +37,7 @@ RDEPEND="${DEPEND}
 
 src_prepare() {
 	epatch "${DISTDIR}"/${P}-docdir.patch #489934
+	epatch "${FILESDIR}"/${P}_fix_lzma_module_usage.patch
 
 	eautoreconf
 }

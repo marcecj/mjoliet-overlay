@@ -1,0 +1,24 @@
+diff --git a/Makefile b/Makefile
+index 72975c4..31b3282 100644
+--- a/Makefile
++++ b/Makefile
+@@ -24,6 +24,9 @@ all :
+ 	$(MAKE) -C compiler -f $(MAKEFILE) prefix=$(prefix)
+ 	$(MAKE) -C architecture/osclib
+ 
++libfaust :
++	$(MAKE) -C compiler -f $(MAKEFILE) prefix=$(prefix) libfaust.$(LIB_EXT)
++
+ dynamic :
+ 	$(MAKE) -C compiler -f $(MAKEFILE) dynamic prefix=$(prefix)
+ 	$(MAKE) -C architecture/httpdlib/src dynamic
+@@ -31,6 +34,9 @@ dynamic :
+ httpd :
+ 	$(MAKE) -C architecture/httpdlib/src all
+ 
++httpd-shared :
++	$(MAKE) -C architecture/httpdlib/src dynamic
++
+ win32 :
+ 	$(MAKE) -C compiler -f $(MAKEFILE) prefix=$(prefix) CXX=$(CROSS)g++
+ 	$(MAKE) -C architecture/osclib CXX=$(CROSS)g++ system=Win32

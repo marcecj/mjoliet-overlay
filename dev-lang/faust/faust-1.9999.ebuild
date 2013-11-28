@@ -8,7 +8,7 @@ RESTRICT="mirror"
 
 inherit eutils git-2
 
-IUSE="libfaust doc examples vim-syntax"
+IUSE="libfaust httpd doc examples vim-syntax"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -17,7 +17,8 @@ KEYWORDS="~x86 ~amd64"
 DESCRIPTION="Faust AUdio STreams is a functional programming language for realtime audio."
 HOMEPAGE="http://faust.grame.fr"
 
-COMMON_DEPEND=">=sys-devel/llvm-3.0"
+COMMON_DEPEND=">=sys-devel/llvm-3.0
+		httpd? ( net-libs/libmicrohttpd )"
 RDEPEND="${COMMON_DEPEND}
 		sys-apps/sed"
 DEPEND="${COMMON_DEPEND}
@@ -38,11 +39,16 @@ src_prepare() {
 	epatch "${FILESDIR}/faust-1.9999_makefile_add_shared_targets.patch"
 }
 
+# TODO: handle static libraries separately
 src_compile() {
 	emake all
 
 	if use libfaust; then
 		emake libfaust
+	fi
+
+	if use httpd; then
+		emake httpd httpd-shared
 	fi
 
 	if use doc; then

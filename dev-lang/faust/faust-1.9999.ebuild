@@ -37,6 +37,7 @@ src_prepare() {
 	epatch "${FILESDIR}/faust-1.9999_build_libfaust.patch"
 	epatch "${FILESDIR}/faust-1.9999_build_libhttpdfaust.patch"
 	epatch "${FILESDIR}/faust-1.9999_makefile_add_shared_targets.patch"
+	epatch "${FILESDIR}/faust-1.9999_makefile_fix_missing_prefix.patch"
 }
 
 # TODO: handle static libraries separately

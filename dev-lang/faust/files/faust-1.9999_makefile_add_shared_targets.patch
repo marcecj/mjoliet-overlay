@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index 72975c4..31b3282 100644
+index ad012cd..1b58b9c 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -24,6 +24,9 @@ all :
@@ -19,6 +19,6 @@ index 72975c4..31b3282 100644
 +httpd-shared :
 +	$(MAKE) -C architecture/httpdlib/src dynamic
 +
- win32 :
- 	$(MAKE) -C compiler -f $(MAKEFILE) prefix=$(prefix) CXX=$(CROSS)g++
- 	$(MAKE) -C architecture/osclib CXX=$(CROSS)g++ system=Win32
+ remote :
+ 	$(MAKE) -C embedded/faustremote/RemoteServer all
+ 	$(MAKE) -C embedded/faustremote/RemoteClient all

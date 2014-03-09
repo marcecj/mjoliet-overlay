@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -7,7 +7,7 @@ EAPI="5"
 #VIM_PLUGIN_VIM_VERSION="7.0"
 inherit vim-plugin git-2
 
-DESCRIPTION="vim plugin: "
+DESCRIPTION="vim plugin: manage and update plugins easily"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=2905"
 LICENSE="vim.org"
 KEYWORDS="~amd64"

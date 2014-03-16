@@ -1,7 +1,8 @@
---- compiler/main.cpp.orig	2013-06-23 18:13:07.235173328 +0200
-+++ compiler/main.cpp	2013-06-23 18:13:37.557185761 +0200
-@@ -21,27 +21,16 @@
- #include "global.hh"
+diff --git a/compiler/main.cpp b/compiler/main.cpp
+index 38ef64c..0a8d88a 100644
+--- a/compiler/main.cpp
++++ b/compiler/main.cpp
+@@ -22,25 +22,14 @@
  #include "export.hh"
  #include "exception.hh"
  
@@ -24,9 +25,8 @@
 -        argv1[i++] = "-t";
 -        argv1[i++] = "120";
 -
--        compile_faust_internal(argc1, argv1, "", "", 0, 0);
-+        compile_faust_internal(argc, argv, "", "", 0, 0);
+-        compile_faust_internal(argc1, argv1, 0, 0, true);
++        compile_faust_internal(argc, argv, "", "", true);
      } catch (faustexception& e) {
          e.PrintMessage();
      }
-     

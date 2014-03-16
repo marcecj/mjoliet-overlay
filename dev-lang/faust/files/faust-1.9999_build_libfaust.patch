@@ -1,24 +1,24 @@
 diff --git a/compiler/Makefile.unix b/compiler/Makefile.unix
-index 080d5dc..255bc9c 100755
+index 25beabc..73ae248 100755
 --- a/compiler/Makefile.unix
 +++ b/compiler/Makefile.unix
 @@ -23,6 +23,7 @@ else
- ARCHFLAGS 	:= 
- LIBFLAGS	:= --mode=link --tag=CXX
- LLVM_CONFIG 	= $(word 1,$(wildcard /usr/bin/llvm-config*))
-+CXXFLAGS	+= -fPIC
- LIB_EXT        = so
+     ARCHFLAGS 	:= 
+     LIBFLAGS	:= --mode=link --tag=CXX
+     LLVM_CONFIG = $(word 1,$(wildcard /usr/bin/llvm-config*))
++    CXXFLAGS	+= -fPIC
+     LIB_EXT     = so
  endif
  
-@@ -65,6 +66,7 @@ all : faust libfaust.a
- dynamic : faust libfaust.$(LIB_EXT)
+@@ -72,6 +73,7 @@ ifeq ($(system), Darwin)
+     dynamic : faust libfaust.$(LIB_EXT)
  else
- all : faust libfaust.a
-+dynamic : faust libfaust.$(LIB_EXT)
+     all : faust libfaust.a
++    dynamic : faust libfaust.$(LIB_EXT)
  endif
  
- libmain.o : libmain.cpp
-@@ -91,9 +93,13 @@ libfaust.a : $(objects) libmain.o global.o
+ ## On iOS, do not compile LLVM part
+@@ -107,9 +109,13 @@ else
  	ranlib $@
  endif
  

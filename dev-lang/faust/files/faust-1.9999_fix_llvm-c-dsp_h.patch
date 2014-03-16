@@ -1,16 +1,16 @@
 diff --git a/compiler/generator/llvm-c-dsp.h b/compiler/generator/llvm-c-dsp.h
-index 936e31e..df2b369 100644
+index 0a61276..ef597ee 100644
 --- a/compiler/generator/llvm-c-dsp.h
 +++ b/compiler/generator/llvm-c-dsp.h
 @@ -40,9 +40,9 @@ extern "C"
   @{
-  */
+ */
  
--typedef struct llvm_dsp_factory {};
+-struct llvm_dsp_factory;
 +typedef struct {} llvm_dsp_factory;
  
--typedef struct llvm_dsp {};
+-struct llvm_dsp;
 +typedef struct {} llvm_dsp;
  
  /**
-  * Create a Faust DSP factory from a DSP source code. The source code is either given :
+  * Create a Faust DSP factory from a DSP source code.

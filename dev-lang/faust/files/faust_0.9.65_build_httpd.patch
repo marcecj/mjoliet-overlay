@@ -1,0 +1,96 @@
+diff --git a/Makefile b/Makefile
+index 6f9919a..1cbe592 100644
+--- a/Makefile
++++ b/Makefile
+@@ -3,6 +3,11 @@ version := 0.9.65
+ DESTDIR ?= 
+ PREFIX ?= /usr/local
+ CROSS=i586-mingw32msvc-
++ifeq ($(system), Darwin)
++LIB_EXT = dylib
++else
++LIB_EXT = so
++endif
+ 
+ MAKEFILE := Makefile.unix
+ 
+@@ -19,6 +24,9 @@ all :
+ httpd :
+ 	$(MAKE) -C architecture/httpdlib/src
+ 
++httpd-shared :
++	$(MAKE) -C architecture/httpdlib/src dynamic
++
+ win32 :
+ 	$(MAKE) -C compiler -f $(MAKEFILE) prefix=$(prefix) CXX=$(CROSS)g++
+ 	$(MAKE) -C architecture/osclib CXX=$(CROSS)g++ system=Win32
+@@ -35,6 +43,7 @@ help :
+ 	@echo "For http support : 'make httpd; make; sudo make install' (requires GNU libmicrohttpd)"
+ 	@echo "make or make all : compile the faust compiler"
+ 	@echo "make httpd : compile httpdlib (requires GNU libmicrohttpd)"
++	@echo "make httpd-shared : compile httpdlib as a shared object (requires GNU libmicrohttpd)"
+ 	@echo "make parser : generate the parser from the lex and yacc files"
+ 	@echo "make clean : remove all object files"
+ 	@echo "make doc : generate the documentation using doxygen"
+@@ -86,6 +95,7 @@ install :
+ 	cp architecture/latexheader.tex $(prefix)/lib/faust/
+ 	# install additional binary libraries (osc, http,...)
+ 	([ -e architecture/httpdlib/libHTTPDFaust.a ] && cp architecture/httpdlib/libHTTPDFaust.a $(prefix)/lib/faust/) || echo libHTTPDFaust not available	
++	([ -e architecture/httpdlib/libHTTPDFaust.$(LIB_EXT) ] && cp architecture/httpdlib/libHTTPDFaust.$(LIB_EXT) $(prefix)/lib/faust/) || echo dynamic libHTTPDFaust not available
+ 	cp architecture/osclib/*.a $(prefix)/lib/faust/
+ 	# install includes files for architectures
+ 	cp -r architecture/faust $(prefix)/include/
+diff --git a/architecture/httpdlib/src/Makefile b/architecture/httpdlib/src/Makefile
+index 6dec360..2ddc6b3 100644
+--- a/architecture/httpdlib/src/Makefile
++++ b/architecture/httpdlib/src/Makefile
+@@ -10,27 +10,35 @@ system	?= $(shell uname -s)
+ 
+ ifeq ($(system), Darwin)
+ ARCHFLAGS :=  -arch i386 -arch x86_64
++LIB_EXT = dylib
+ else
+ ARCHFLAGS := 
++LIB_EXT = so
+ endif
+ 
+ CXXFLAGS ?= -O3 -Wall -Wuninitialized $(ARCHFLAGS)
+ CXXFLAGS += `pkg-config --cflags libmicrohttpd` -I../../../architecture -I/usr/local/include -Wno-parentheses $(addprefix -I, $(subprojects)) -DINSTALL_PREFIX='"$(prefix)"'
+ 
+-
+-
++ifneq ($(system), Darwin)
++CXXFLAGS += -fPIC
++endif
+ 
+ all : ../libHTTPDFaust.a
+ 
+-dynamic : ../libHTTPDFaust.dylib
++dynamic : ../libHTTPDFaust.$(LIB_EXT)
+ 
+ ../libHTTPDFaust.a : $(objects)
+ 	rm -f $@
+ 	ar cq $@ $(objects)
+ 	ranlib $@
+ 
+-../libHTTPDFaust.dylib  :  $(objects)
+-	libtool -dynamic $(objects) -lc -lstdc++ `pkg-config --libs libmicrohttpd`  -macosx_version_min 10.6  -install_name /usr/local/lib/faust/libHTTPDFaust.dylib -o $@
++ifeq ($(system), Darwin)
++../libHTTPDFaust.$(LIB_EXT)  :  $(objects)
++	libtool -dynamic $(objects) -lc -lstdc++ `pkg-config --libs libmicrohttpd`  -macosx_version_min 10.6  -install_name /usr/local/lib/faust/libHTTPDFaust.$(LIB_EXT) -o $@
++else
++../libHTTPDFaust.$(LIB_EXT)  :  $(objects)
++	$(CXX) $(CXXFLAGS) -shared $(objects) -lc -lstdc++ `pkg-config --libs libmicrohttpd` -o $@
++endif
+ 	
+ depend :
+ 	makedepend -fMakefile -w120 -Y -- $(CXXFLAGS) -- $(sources)
+@@ -38,7 +46,7 @@ depend :
+ clean :
+ 	rm -f $(objects) hexa/jsscripts hexa/jsscripts.cpp
+ 	rm -f $(objects) hexa/stylesheet hexa/stylesheet.cpp
+-	rm -f ../libHTTPDFaust.a ../libHTTPDFaust.dylib
++	rm -f ../libHTTPDFaust.a ../libHTTPDFaust.$(LIB_EXT)
+ 	
+ 
+ hexa/jsscripts.o : hexa/jsscripts.cpp

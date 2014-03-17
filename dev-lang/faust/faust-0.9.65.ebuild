@@ -8,7 +8,7 @@ RESTRICT="mirror"
 
 inherit eutils
 
-IUSE="doc examples vim-syntax"
+IUSE="doc examples httpd vim-syntax"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -19,13 +19,24 @@ HOMEPAGE="http://faudiostream.sourceforge.net"
 SRC_URI="mirror://sourceforge/faudiostream/${P}.zip"
 
 DEPEND="sys-devel/bison
-		 sys-devel/flex"
+		 sys-devel/flex
+		 httpd? ( net-libs/libmicrohttpd )"
 RDEPEND="sys-apps/sed"
 
 src_prepare() {
 	# fix prefix
 	sed -i -e "s\/usr/local\ /usr\ " Makefile
 	sed -i -e "s\/usr/local\ /usr\ " tools/faust2appls/Makefile
+
+	epatch "${FILESDIR}/faust_0.9.65_build_httpd.patch"
+}
+
+src_compile() {
+	emake all
+
+	if use httpd; then
+		emake httpd httpd-shared
+	fi
 }
 
 src_install() {

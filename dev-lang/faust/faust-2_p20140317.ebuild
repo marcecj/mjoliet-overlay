@@ -27,6 +27,7 @@ DEPEND="${COMMON_DEPEND}
 		 sys-devel/flex"
 
 EGIT_REPO_URI="git://git.code.sf.net/p/faudiostream/code"
+EGIT_BRANCH="faust2"
 EGIT_COMMIT="091cddaf8af31702c7b1f6ce905a5b6223a31227"
 EGIT_PROJECT="faust2"
 

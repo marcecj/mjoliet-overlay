@@ -31,8 +31,6 @@ EGIT_BRANCH="faust2"
 EGIT_PROJECT="faust2"
 
 src_prepare() {
-	epatch "${FILESDIR}/faust-1.9999_do_not_append_t_flag.patch"
-	epatch "${FILESDIR}/faust-1.9999_fix_llvm-c-dsp_h.patch"
 	epatch "${FILESDIR}/faust-1.9999_build_libfaust.patch"
 	epatch "${FILESDIR}/faust-1.9999_build_libhttpdfaust.patch"
 	epatch "${FILESDIR}/faust-1.9999_makefile_add_shared_targets.patch"

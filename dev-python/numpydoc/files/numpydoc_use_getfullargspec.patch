@@ -1,0 +1,16 @@
+diff --git a/numpydoc/docscrape.py b/numpydoc/docscrape.py
+index 2c49ed8..26f8b57 100644
+--- a/numpydoc/docscrape.py
++++ b/numpydoc/docscrape.py
+@@ -433,7 +433,10 @@ class FunctionDoc(NumpyDocString):
+             func, func_name = self.get_func()
+             try:
+                 # try to read signature
+-                argspec = inspect.getargspec(func)
++                try:
++                    argspec = inspect.getfullargspec(func)
++                except AttributeError:
++                    argspec = inspect.getargspec(func)
+                 argspec = inspect.formatargspec(*argspec)
+                 argspec = argspec.replace('*','\*')
+                 signature = '%s%s' % (func_name, argspec)

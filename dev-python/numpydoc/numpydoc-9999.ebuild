@@ -18,8 +18,6 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test"
 
-PATCHES=( "${FILESDIR}/numpydoc_use_getfullargspec.patch" )
-
 RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/sphinx[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}

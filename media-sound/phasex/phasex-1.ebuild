@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/media-sound/phasex/phasex-0.12.0_beta3.ebuild,v 1.2 2012/05/05 08:45:44 mgorny Exp $
 
@@ -18,7 +18,7 @@ RDEPEND="x11-libs/libX11
 	media-libs/alsa-lib
 	media-libs/libsamplerate
 	x11-libs/gtk+:2
-	media-sound/lash"
+	virtual/liblash"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

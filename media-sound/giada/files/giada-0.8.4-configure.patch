@@ -1,0 +1,56 @@
+--- configure.ac.orig	2014-03-26 22:40:47.000000000 +0100
++++ configure.ac	2014-06-23 19:05:14.652810857 +0200
+@@ -53,8 +53,29 @@
+ 	AS_HELP_STRING([--enable-vst], [enable vst support]),
+   [AC_DEFINE(WITH_VST)]
+ )
+ 
++AC_ARG_ENABLE(
++	alsa,
++	AS_HELP_STRING([--disable-alsa], [disable alsa support]),
++  [AC_DEFINE(WITH_ALSA)]
++)
++AM_CONDITIONAL(ALSA, test "x$enable_alsa" = "xtrue")
++
++AC_ARG_ENABLE(
++	jack,
++	AS_HELP_STRING([--enable-jack], [enable jack support]),
++  [AC_DEFINE(WITH_JACK)]
++)
++AM_CONDITIONAL(JACK, test "x$enable_jack" = "xtrue")
++
++AC_ARG_ENABLE(
++	pulse,
++	AS_HELP_STRING([--enable-pulse], [enable pulseaudio support]),
++  [AC_DEFINE(WITH_PULSE)]
++)
++AM_CONDITIONAL(PULSE, test "x$enable_pulse" = "xtrue")
++
+ # ----------------------------------------------------------------------
+ 
+ # Check for programs.
+ 
+--- src/Makefile.am~	2014-06-23 19:03:28.617577505 +0200
++++ src/Makefile.am	2014-06-23 19:06:29.709145936 +0200
+@@ -46,10 +46,19 @@
+ # inside configure.ac
+ 
+ if LINUX
+ giada_LDADD = -lsndfile -lfltk -lXext -lX11 -lXft -lXpm -lm  \
+-							rtaudio/librtaudio.a -ljack -lasound -lpthread -ldl \
+-							-lpulse-simple -lpulse -lsamplerate -lrtmidi
++							rtaudio/librtaudio.a -lpthread -ldl \
++							-lsamplerate -lrtmidi
++if ALSA
++giada_LDADD += -lasound
++endif
++if JACK
++giada_LDADD += -ljack
++endif
++if PULSE
++giada_LDADD += -lpulse-simple -lpulse
++endif
+ endif
+ if WINDOWS
+ giada_LDADD   = -lole32 rtaudio/librtaudio.a -ldsound -lwinmm -lwsock32 \
+ 								-lm -lpthread -lfltk -lwininet -lgdi32 -lshell32 -lvfw32 \

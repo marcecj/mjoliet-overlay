@@ -1,0 +1,12 @@
+--- SConstruct~	2014-07-08 13:26:06.769070518 +0200
++++ SConstruct	2014-07-08 13:29:08.526768400 +0200
+@@ -86,8 +86,9 @@
+ 
+ print"-                     2/2:compiling"
+ print"-                     building the engine:"
+ 
++env.Append(LIBS = ['m'])
+ env.Program('minicomputerCPU','cpu/main.c');
+ 
+ print""
+ print"-                     building the editor:"

@@ -1,0 +1,13 @@
+--- editor/Memory.h~	2009-11-19 05:46:01.000000000 +0100
++++ editor/Memory.h	2014-07-08 13:38:31.417258639 +0200
+@@ -28,9 +28,9 @@
+ //#include <boost/archive/text_iarchive.hpp>
+ #include <cstdio>
+ #include <cstdlib>
+ 
+-//    #include <unistd.h>
++#include <unistd.h>
+ #include <cerrno> 
+ #include "../common.h"
+ using namespace std;
+ //#include "patch.h"

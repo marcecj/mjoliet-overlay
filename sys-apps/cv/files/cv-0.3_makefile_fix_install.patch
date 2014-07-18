@@ -1,0 +1,10 @@
+--- Makefile~	2014-07-12 16:36:19.000000000 +0200
++++ Makefile	2014-07-18 14:36:59.795529576 +0200
+@@ -11,6 +11,7 @@
+ clean :
+ 	rm -f *.o $(OBJ)
+ install : $(OBJ)
+ 	@echo "Installing to $(BINDIR) ..."
++	mkdir -p $(BINDIR)/$(TARGET)
+ 	@install -m 0755 $(OBJ) $(BINDIR)/$(TARGET) || \
+ 	echo "Failed. Try "make PREFIX=~ install" ?"

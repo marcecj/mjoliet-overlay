@@ -1,5 +1,4 @@
 app-emacs
-app-shells
 app-text
 app-vim
 dev-lang
@@ -10,8 +9,10 @@ games-emulation
 media-gfx
 media-libs
 media-sound
-net-news
+net-misc
 puredata-base
 sci-libs
 sci-misc
 sys-apps
+sys-fs
+sys-process

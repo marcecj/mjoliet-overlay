@@ -3,7 +3,7 @@
 # $Header: /var/cvsroot/gentoo-x86/dev-python/numpydoc/numpydoc-0.4-r1.ebuild,v 1.4 2014/02/16 20:36:11 vapier Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3} )
 
 inherit distutils-r1 vcs-snapshot git-2
 

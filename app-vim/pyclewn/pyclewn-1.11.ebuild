@@ -6,7 +6,7 @@ EAPI="5"
 
 RESTRICT="mirror"
 
-PYTHON_COMPAT=( python{3_1,3_2,3_3} )
+PYTHON_COMPAT=( python3_{2,3} )
 
 inherit eutils distutils-r1 vim-doc
 

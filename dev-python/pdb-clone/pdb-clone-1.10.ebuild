@@ -19,3 +19,5 @@ IUSE=""
 
 DEPEND="!<app-vim/pyclewn-2.0.0"
 RDEPEND="${DEPEND}"
+
+DOCS=( README{,.rst} NEWS pdb-clone.wiki/ )

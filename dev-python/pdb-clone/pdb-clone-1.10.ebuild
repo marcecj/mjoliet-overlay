@@ -17,5 +17,5 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND=""
+DEPEND="!<app-vim/pyclewn-2.0.0"
 RDEPEND="${DEPEND}"

@@ -25,7 +25,7 @@ DEPEND="|| (
 		   )"
 RDEPEND="${DEPEND}
 	sys-devel/gdb
-	dev-python/pdb-clone
+	dev-python/pdb-clone[${PYTHON_USEDEP}]
 	$(python_gen_cond_dep \
 		'dev-python/trollius[${PYTHON_USEDEP}]' python{2_7,3_2,3_3})
 	"

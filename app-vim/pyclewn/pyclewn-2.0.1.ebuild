@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}
 	sys-devel/gdb
 	dev-python/pdb-clone
 	$(python_gen_cond_dep \
-		'dev-python/pdb-clone[${PYTHON_USEDEP}]' python{2_7,3_2,3_3})
+		'dev-python/trollius[${PYTHON_USEDEP}]' python{2_7,3_2,3_3})
 	"
 
 src_prepare() {

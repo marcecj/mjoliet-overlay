@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -18,6 +18,7 @@ DESCRIPTION="Faust AUdio STreams is a functional programming language for realti
 HOMEPAGE="http://faust.grame.fr"
 
 COMMON_DEPEND=">=sys-devel/llvm-3.0
+		<=sys-devel/llvm-3.3
 		httpd? ( net-libs/libmicrohttpd )"
 RDEPEND="${COMMON_DEPEND}
 		sys-apps/sed"

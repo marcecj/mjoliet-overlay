@@ -6,7 +6,6 @@
 		<name>Marc Joliet</name>
 	</maintainer>
 	<use>
-		<flag name="adaptive">Compile the adaptive external</flag>
 		<flag name="apple">Compile the apple external</flag>
 		<flag name="arraysize">Compile the arraysize external</flag>
 		<flag name="bassemu">Compile the bassemu external</flag>
@@ -15,14 +14,10 @@
 		<flag name="chaos">Compile the chaos external</flag>
 		<flag name="creb">Compile the creb external</flag>
 		<flag name="cxc">Compile the cxc external</flag>
-		<flag name="cyclone">Compile the cyclone external</flag>
 		<flag name="earplug">Compile the earplug external</flag>
 		<flag name="ekext">Compile the ekext external</flag>
 		<flag name="ext13">Compile the ext13 external</flag>
-		<flag name="flashserver">Compile the flashserver external</flag>
 		<flag name="flatgui">Compile the flatgui external</flag>
-		<flag name="flatspace">Compile the flatspace external</flag>
-		<flag name="flib">Compile the flib external</flag>
 		<flag name="freeverb">Compile the freeverb external</flag>
 		<flag name="gem2pdp">Compile the gem2pdp external</flag>
 		<flag name="ggee">Compile the ggee external</flag>
@@ -30,20 +25,9 @@
 		<flag name="hcs">Compile the hcs external</flag>
 		<flag name="hid">Compile the hid external</flag>
 		<flag name="iem16">Compile the iem16 external</flag>
-		<flag name="iem_ambi">Compile the iem_ambi external</flag>
-		<flag name="iem_bin_ambi">Compile the iem_bin_ambi external</flag>
-		<flag name="iem_adaptfilt">Compile the iem_adaptfilt external</flag>
 		<flag name="iemlib">Compile the iemlib external</flag>
 		<flag name="iemlib">Compile the iemlib external</flag>
-		<flag name="iem_tab">Compile the iem_tab external</flag>
-		<flag name="iemmatrix">Compile the iemmatrix external</flag>
-		<flag name="iemxmlrpc">Compile the iemxmlrpc external</flag>
-		<flag name="iem_delay">Compile the iem_delay external</flag>
-		<flag name="iem_roomsim">Compile the iem_roomsim external</flag>
-		<flag name="iem_spec2">Compile the iem_spec2 external</flag>
-		<flag name="iemgui">Compile the iemgui external</flag>
 		<flag name="jasch_lib">Compile the jasch_lib external</flag>
-		<flag name="loaders">Compile the loaders external</flag>
 		<flag name="loaders-hexloader">Compile the hexloader external</flag>
 		<flag name="loaders-libdir">Compile the libdir external</flag>
 		<flag name="loaders-tclpd">Compile the tclpd external</flag>
@@ -74,7 +58,6 @@
 		<flag name="smlib">Compile the smlib external</flag>
 		<flag name="testtools">Compile the testtools external</flag>
 		<flag name="tof">Compile the tof external</flag>
-		<flag name="toxy">Compile the toxy external</flag>
 		<flag name="unauthorized">Compile the unauthorized external</flag>
 		<flag name="vbap">Compile the vbap external</flag>
 		<flag name="windowing">Compile the windowing external</flag>

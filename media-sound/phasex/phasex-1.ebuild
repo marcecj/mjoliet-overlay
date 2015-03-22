@@ -5,7 +5,7 @@
 EAPI="5"
 
 DESCRIPTION="Software synthesizer (Phase Harmonic Advanced Synthesis EXperiment)"
-HOMEPAGE="http://sysex.net/phasex/"
+HOMEPAGE="https://github.com/disabled/phasex-dev/"
 SRC_URI="mirror://github/disabled/${PN}-dev/${PN}-dev-m${PV}.tar.gz"
 
 LICENSE="GPL-2"

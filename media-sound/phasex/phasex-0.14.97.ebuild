@@ -7,7 +7,7 @@ EAPI="5"
 inherit autotools
 
 DESCRIPTION="Software synthesizer (Phase Harmonic Advanced Synthesis EXperiment)"
-HOMEPAGE="http://sysex.net/phasex/"
+HOMEPAGE="https://github.com/williamweston/phasex/"
 SRC_URI="https://github.com/williamweston/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"

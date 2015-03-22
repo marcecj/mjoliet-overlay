@@ -26,7 +26,6 @@
 		<flag name="hid">Compile the hid external</flag>
 		<flag name="iem16">Compile the iem16 external</flag>
 		<flag name="iemlib">Compile the iemlib external</flag>
-		<flag name="iemlib">Compile the iemlib external</flag>
 		<flag name="jasch_lib">Compile the jasch_lib external</flag>
 		<flag name="loaders-hexloader">Compile the hexloader external</flag>
 		<flag name="loaders-libdir">Compile the libdir external</flag>

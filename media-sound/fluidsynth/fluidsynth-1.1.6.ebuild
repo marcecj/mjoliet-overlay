@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="5"
-inherit cmake-utils flag-o-matic
+EAPI=5
+inherit cmake-multilib flag-o-matic
 
-DESCRIPTION="Fluidsynth is a software real-time synthesizer based on the Soundfont 2 specifications."
+DESCRIPTION="Fluidsynth is a software real-time synthesizer based on the Soundfont 2 specifications"
 HOMEPAGE="http://www.fluidsynth.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
@@ -14,19 +14,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="alsa dbus debug examples jack ladspa lash portaudio pulseaudio readline sndfile"
 
-RDEPEND=">=dev-libs/glib-2.6.5:2
-	alsa? ( media-libs/alsa-lib
+RDEPEND=">=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}]
+	alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}]
 		lash? ( virtual/liblash ) )
-	dbus? ( >=sys-apps/dbus-1.0.0 )
-	jack? ( media-sound/jack-audio-connection-kit )
-	ladspa? ( >=media-libs/ladspa-sdk-1.12
-		>=media-libs/ladspa-cmt-1.15 )
-	pulseaudio? ( >=media-sound/pulseaudio-0.9.8 )
-	portaudio? ( >=media-libs/portaudio-19_pre )
-	readline? ( sys-libs/readline )
-	sndfile? ( >=media-libs/libsndfile-1.0.18 )"
+	dbus? ( >=sys-apps/dbus-1.6.18-r1[${MULTILIB_USEDEP}] )
+	jack? ( >=media-sound/jack-audio-connection-kit-0.121.3-r1[${MULTILIB_USEDEP}] )
+	ladspa? ( >=media-libs/ladspa-sdk-1.13-r2[${MULTILIB_USEDEP}]
+		>=media-libs/ladspa-cmt-1.16-r3[${MULTILIB_USEDEP}] )
+	pulseaudio? ( >=media-sound/pulseaudio-2.1-r1[${MULTILIB_USEDEP}] )
+	portaudio? ( >=media-libs/portaudio-19_pre20111121-r1[${MULTILIB_USEDEP}] )
+	readline? ( >=sys-libs/readline-6.2_p5-r1[${MULTILIB_USEDEP}] )
+	sndfile? ( >=media-libs/libsndfile-1.0.25[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+	>=virtual/pkgconfig-0-r1[${MULTILIB_USEDEP}]"
 
 src_configure() {
 	# autotools based build system has AC_CHECK_LIB(pthread, pthread_create) wrt
@@ -52,19 +52,19 @@ src_configure() {
 		mycmakeargs+=( -Denable-lash=OFF )
 	fi
 
-	cmake-utils_src_configure
+	cmake-multilib_src_configure
 }
 
 src_install() {
-	cmake-utils_src_install
+	cmake-multilib_src_install
 
 	dodoc AUTHORS NEWS README THANKS TODO doc/*.txt
 
-	insinto /usr/share/doc/${PF}/pdf
-	doins doc/*.pdf
+	docinto pdf
+	dodoc doc/*.pdf
 
 	if use examples; then
-		insinto /usr/share/doc/${PF}/examples
-		doins doc/*.c
+		docinto examples
+		dodoc doc/*.c
 	fi
 }

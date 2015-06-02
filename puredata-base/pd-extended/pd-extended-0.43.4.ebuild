@@ -38,7 +38,7 @@ DEPEND="dev-lang/tcl:0
 	fftw? ( sci-libs/fftw:3.0 )
 	hcs? ( virtual/libusb:1 )
 	jack? ( media-sound/jack-audio-connection-kit )
-	loaders-pdlua? ( dev-lang/lua )
+	loaders-pdlua? ( || ( dev-lang/lua:5.1 dev-lang/lua:0 ) )
 	pdogg? ( media-libs/libogg
 		media-libs/libvorbis )
 	portaudio? ( media-libs/portaudio )

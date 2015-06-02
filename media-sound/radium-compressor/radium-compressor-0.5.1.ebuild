@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -19,9 +19,9 @@ IUSE=""
 
 DEPEND=">=dev-lang/faust-0.9.58
 		media-sound/jack-audio-connection-kit
-		dev-qt/qtcore
-		dev-qt/qtgui
-		|| ( >=sys-devel/gcc-4.7.0 >=sys-devel/clang-3.0 )"
+		dev-qt/qtcore:4
+		dev-qt/qtgui:4
+		|| ( >=sys-devel/gcc-4.7.0:* >=sys-devel/clang-3.0 )"
 RDEPEND="${DEPEND}"
 
 DOCS=(README COPYING Changelog)

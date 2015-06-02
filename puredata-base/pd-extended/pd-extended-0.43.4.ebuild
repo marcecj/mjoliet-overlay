@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -28,15 +28,15 @@ IUSE_PD_EXTERNALS="apple arraysize +bassemu +boids +bsaylor chaos +creb +cxc
 	-oscx -zexy"
 IUSE="+alsa debug fftw +jack portaudio ${IUSE_PD_EXTERNALS}"
 
-DEPEND="dev-lang/tcl
-	dev-lang/tk
+DEPEND="dev-lang/tcl:0
+	dev-lang/tk:0
 	media-libs/flac
 	media-sound/lame
 	media-libs/ladspa-sdk
 	media-libs/libsndfile
 	alsa? ( media-libs/alsa-lib )
-	fftw? ( sci-libs/fftw )
-	hcs? ( virtual/libusb )
+	fftw? ( sci-libs/fftw:3.0 )
+	hcs? ( virtual/libusb:1 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	loaders-pdlua? ( dev-lang/lua )
 	pdogg? ( media-libs/libogg

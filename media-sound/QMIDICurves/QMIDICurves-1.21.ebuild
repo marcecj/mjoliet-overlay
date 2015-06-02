@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -25,8 +25,8 @@ export S="${WORKDIR}/${MY_S}"
 export pro_file="${PN}.pro"
 
 DEPEND="x11-libs/qwt:5
-		dev-qt/qtcore
-		dev-qt/qtgui"
+		dev-qt/qtcore:4
+		dev-qt/qtgui:4"
 RDEPEND="${DEPEND}"
 
 DOCS="README RELEASES"

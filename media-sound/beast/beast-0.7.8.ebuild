@@ -1,4 +1,4 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1-r2.ebuild,v 1.1 2009/07/21 17:40:19 ssuominen Exp $
 
@@ -16,9 +16,9 @@ KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 
 RDEPEND=">=dev-libs/glib-2.0
-	>=x11-libs/gtk+-2.12
+	>=x11-libs/gtk+-2.12:2
 	>=sys-libs/zlib-1.1.3
-	>=dev-scheme/guile-1.6
+	>=dev-scheme/guile-1.6:12
 	>=media-libs/libart_lgpl-2.3.8
 	>=gnome-base/libgnomecanvas-2.4
 	>=media-libs/libogg-1.0

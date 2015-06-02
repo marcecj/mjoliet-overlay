@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -22,7 +22,7 @@ DEPEND="
 	dev-texlive/texlive-mathextra
 	dev-texlive/texlive-xetex
 	dev-libs/libxslt
-	app-text/docbook-xml-dtd
+	app-text/docbook-xml-dtd:*
 	dev-texlive/texlive-pictures"
 RDEPEND="${DEPEND}"
 

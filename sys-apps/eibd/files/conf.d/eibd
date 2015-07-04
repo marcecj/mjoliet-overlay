@@ -1,4 +1,0 @@
-EIBD_LOGFILE="/var/log/eibd.log"
-EIBD_URL="ipt:127.0.0.1"
-EIBD_ARGS="-t 1023 -c -i -u"
-EIBD_USER="eibd:eibd"

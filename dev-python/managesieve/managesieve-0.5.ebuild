@@ -10,7 +10,7 @@ PYTHON_COMPAT=( python2_7 )
 inherit distutils-r1
 
 DESCRIPTION="A ManageSieve client library for remotely managing Sieve scripts."
-HOMEPAGE="http://python-managesieve.origo.ethz.ch/"
+HOMEPAGE="https://pypi.python.org/pypi/managesieve/ https://gitlab.com/htgoebel/managesieve"
 SRC_URI="mirror://pypi/m/managesieve/${P}.tar.bz2"
 
 LICENSE="PYTHON"

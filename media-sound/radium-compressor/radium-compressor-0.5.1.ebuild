@@ -10,7 +10,7 @@ inherit eutils toolchain-funcs
 
 DESCRIPTION="Radium Compressor is a JACK version of the system compressor in Radium."
 HOMEPAGE="https://github.com/kmatheussen/radium_compressor"
-SRC_URI="http://archive.notam02.no/arkiv/src/radium_compressor-0.5.1.tar.gz"
+SRC_URI="https://github.com/kmatheussen/${PN/-/_}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"

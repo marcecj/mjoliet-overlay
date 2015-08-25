@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 
 DESCRIPTION="Faust AUdio STreams is a functional programming language for realtime audio."
-HOMEPAGE="http://faudiostream.sourceforge.net"
+HOMEPAGE="http://faust.grame.fr"
 SRC_URI="mirror://sourceforge/faudiostream/${P}.zip"
 
 DEPEND="sys-devel/bison

@@ -11,7 +11,7 @@ MY_P="${PN}-src-${MY_PV}"
 MY_T="${PN}-minsrc-${MY_PV}"
 DESCRIPTION="Free crossplatform audio editor"
 HOMEPAGE="http://web.audacityteam.org/"
-SRC_URI="http://audacity.googlecode.com/files/${MY_T}.tar.xz"
+SRC_URI="mirror://gentoo/${MY_T}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"

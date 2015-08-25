@@ -7,8 +7,8 @@ EAPI="5"
 inherit autotools eutils multilib
 
 DESCRIPTION="RtMidi provide a common C++ API for realtime MIDI input/output across ALSA and JACK."
-HOMEPAGE="http://www.music.mcgill.ca/~gary/rtmidi/"
-SRC_URI="http://www.music.mcgill.ca/~gary/rtmidi/release/${P}.tar.gz"
+HOMEPAGE="https://www.music.mcgill.ca/~gary/rtmidi/"
+SRC_URI="https://www.music.mcgill.ca/~gary/rtmidi/release/${P}.tar.gz"
 
 LICENSE="Rt-Midi"
 SLOT="0"

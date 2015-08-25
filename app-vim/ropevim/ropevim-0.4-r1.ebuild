@@ -12,7 +12,7 @@ DISTUTILS_SINGLE_IMPL=1
 inherit distutils-r1 vim-plugin
 
 DESCRIPTION="Ropevim is a plugin for performing python refactorings in vim. It uses rope library."
-HOMEPAGE="http://rope.sourceforge.net/ropevim.html"
+HOMEPAGE="https://rope.sourceforge.net/ropevim.html"
 LICENSE="GPL-2"
 KEYWORDS="~amd64"
 IUSE=""

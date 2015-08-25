@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
 inherit distutils-r1
 
 DESCRIPTION="A clone of pdb, the standard library python debugger."
-HOMEPAGE="https://code.google.com/p/pdb-clone/ http://pypi.python.org/pypi/pdb-clone"
+HOMEPAGE="https://code.google.com/p/pdb-clone/ https://pypi.python.org/pypi/pdb-clone"
 SRC_URI="mirror://pypi/p/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2+"

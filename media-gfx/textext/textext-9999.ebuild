@@ -8,7 +8,7 @@ inherit eutils mercurial
 
 DESCRIPTION="textext is an inkscape extension, which embed re-editable LaTeX objects in SVG drawings"
 HOMEPAGE="http://pav.iki.fi/software/textext/"
-EHG_REPO_URI="http://bitbucket.org/pv/textext/"
+EHG_REPO_URI="https://bitbucket.org/pv/textext/"
 
 LICENSE="BSD"
 SLOT="0"

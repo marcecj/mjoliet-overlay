@@ -7,8 +7,8 @@ EAPI="5"
 inherit autotools eutils flag-o-matic versionator
 
 DESCRIPTION="Realtime multimedia environment and additional plugins"
-HOMEPAGE="http://www.puredata.info"
-SRC_URI="http://sourceforge.net/projects/pure-data/files/${PN}/${PV}/Pd-extended_${PV}-source.tar.bz2"
+HOMEPAGE="https://www.puredata.info"
+SRC_URI="https://sourceforge.net/projects/pure-data/files/${PN}/${PV}/Pd-extended_${PV}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

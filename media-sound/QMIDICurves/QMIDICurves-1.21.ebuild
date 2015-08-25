@@ -13,8 +13,8 @@ inherit qt4-r2
 MY_S=${PN}${PV}
 
 DESCRIPTION="A simple QT/JACK application that lets you change MIDI-keyboard velocity response."
-HOMEPAGE="http://sourceforge.net/projects/qmidicurves/"
-SRC_URI="http://sourceforge.net/projects/qmidicurves/files/${PN}/${PV}/${MY_S}.tar.gz/download -> ${MY_S}.tar.gz"
+HOMEPAGE="https://sourceforge.net/projects/qmidicurves/"
+SRC_URI="https://sourceforge.net/projects/qmidicurves/files/${PN}/${PV}/${MY_S}.tar.gz/download -> ${MY_S}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

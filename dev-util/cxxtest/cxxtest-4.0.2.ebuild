@@ -8,7 +8,7 @@ RESTRICT="mirror"
 
 DESCRIPTION="CxxTest is a unit testing framework for C++ that is similar in spirit to JUnit, CppUnit, and xUnit."
 HOMEPAGE="http://cxxtest.com/"
-SRC_URI="http://sourceforge.net/projects/${PN}/files/${PN}/${PV}/${P}.zip"
+SRC_URI="https://sourceforge.net/projects/${PN}/files/${PN}/${PV}/${P}.zip"
 
 LICENSE="LGPL-2"
 SLOT="0"

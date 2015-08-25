@@ -6,7 +6,7 @@ EAPI="5"
 
 DESCRIPTION="live loop-based MIDI software sequencer"
 HOMEPAGE="https://harmonyseq.wordpress.com/"
-SRC_URI="http://launchpad.net/harmonyseq/stable/${PV}/+download/${P}.tar.gz"
+SRC_URI="https://launchpad.net/harmonyseq/stable/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

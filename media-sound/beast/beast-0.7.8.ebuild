@@ -8,8 +8,8 @@ inherit eutils fdo-mime
 IUSE=""
 
 DESCRIPTION="BEAST - the Bedevilled Sound Engine"
-HOMEPAGE="http://beast.gtk.org"
-SRC_URI="http://dist.testbit.eu/beast/v${PV%.[0-9]}/${P}.tar.bz2"
+HOMEPAGE="https://testbit.eu/wiki/Beast_Home"
+SRC_URI="https://testbit.eu/pub/dists/beast/v${PV%.[0-9]}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="~amd64 ~ppc ~x86"

@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit git-2
+inherit git-r3
 
 DESCRIPTION="btrfs-snap creates and maintains the history of snapshots of btrfs filesystems."
 HOMEPAGE="https://github.com/jf647/btrfs-snap"

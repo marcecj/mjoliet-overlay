@@ -6,7 +6,7 @@ EAPI="5"
 
 RESTRICT="mirror"
 
-inherit eutils git-2
+inherit eutils git-r3
 
 IUSE="libfaust httpd doc examples vim-syntax"
 
@@ -27,10 +27,9 @@ DEPEND="${COMMON_DEPEND}
 		 sys-devel/clang
 		 sys-devel/flex"
 
+EGIT_MIN_CLONE_TYPE="mirror"
 EGIT_REPO_URI="git://git.code.sf.net/p/faudiostream/code"
-EGIT_BRANCH="faust2"
 EGIT_COMMIT="091cddaf8af31702c7b1f6ce905a5b6223a31227"
-EGIT_PROJECT="faust2"
 
 src_prepare() {
 	epatch "${FILESDIR}/faust-1.9999_build_libfaust.patch"

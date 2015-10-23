@@ -6,7 +6,6 @@
 		<name>Marc Joliet</name>
 	</maintainer>
 	<use>
-		<flag name="libfaust"> Additionally install the FAUST compiler as a shared library </flag>
 		<flag name="httpd"> Additionally install the libHTTPDFaust library </flag>
 	</use>
 </pkgmetadata>

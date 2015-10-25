@@ -28,8 +28,8 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 PATCHES=(
-	"$FILESDIR/$PN-0.3.4-install_layout.patch"
-	"$FILESDIR/$PN-0.3.4-path-logging.patch"
+	"$FILESDIR/$P-install_layout.patch"
+	"$FILESDIR/$P-path-logging.patch"
 )
 
 src_install() {

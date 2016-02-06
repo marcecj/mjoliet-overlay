@@ -1,10 +1,10 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI=5
 
-inherit base
+inherit eutils
 
 DESCRIPTION="irqtop is a simple monitor for /proc/interrupts."
 HOMEPAGE="https://gitorious.org/elboulangero/irqtop/"
@@ -21,6 +21,10 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/elboulangero-irqtop"
 
 PATCHES=( "${FILESDIR}/irqtop-0.3_remove_Werror.patch" )
+
+src_prepare() {
+	epatch "${PATCHES[@]}"
+}
 
 src_install() {
 	emake PREFIX="${EPREFIX}/usr" DESTDIR="${D}" install

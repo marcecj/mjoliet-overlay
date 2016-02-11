@@ -7,8 +7,8 @@ EAPI=5
 inherit eutils
 
 DESCRIPTION="irqtop is a simple monitor for /proc/interrupts."
-HOMEPAGE="https://gitorious.org/elboulangero/irqtop/"
-SRC_URI="https://gitorious.org/elboulangero/${PN}/archive/2a902c5cbc50f79392f0506a6ed8383b05a1bf32.tar.gz"
+HOMEPAGE="https://gitlab.com/elboulangero/irqtop/"
+SRC_URI="https://gitlab.com/elboulangero/irqtop/repository/archive.tar.gz?ref=0.3 -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/elboulangero-irqtop"
+S="${WORKDIR}/${P}-2a902c5cbc50f79392f0506a6ed8383b05a1bf32"
 
 PATCHES=( "${FILESDIR}/irqtop-0.3_remove_Werror.patch" )
 

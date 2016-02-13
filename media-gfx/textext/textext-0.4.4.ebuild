@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -6,7 +6,7 @@ EAPI="5"
 
 inherit eutils
 
-DESCRIPTION="textext is an inkscape extension, which embed re-editable LaTeX objects in SVG drawings"
+DESCRIPTION="An inkscape extension that embeds re-editable LaTeX objects in SVG drawings"
 HOMEPAGE="http://pav.iki.fi/software/textext/"
 SRC_URI="http://pav.iki.fi/software/${PN}/${P}.tar.gz"
 

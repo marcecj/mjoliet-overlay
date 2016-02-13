@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -12,7 +12,7 @@ inherit qt4-r2
 
 MY_S=${PN}${PV}
 
-DESCRIPTION="A simple QT/JACK application that lets you change MIDI-keyboard velocity response."
+DESCRIPTION="A QT/JACK application that lets you change MIDI-keyboard velocity response."
 HOMEPAGE="https://sourceforge.net/projects/qmidicurves/"
 SRC_URI="https://sourceforge.net/projects/qmidicurves/files/${PN}/${PV}/${MY_S}.tar.gz/download -> ${MY_S}.tar.gz"
 

@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -6,7 +6,7 @@ EAPI=5
 
 RESTRICT="mirror"
 
-DESCRIPTION="CxxTest is a unit testing framework for C++ that is similar in spirit to JUnit, CppUnit, and xUnit."
+DESCRIPTION="A unit testing framework for C++ (similar to JUnit, CppUnit, and xUnit)."
 HOMEPAGE="http://cxxtest.com/"
 SRC_URI="https://sourceforge.net/projects/${PN}/files/${PN}/${PV}/${P}.zip"
 

@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
@@ -11,7 +11,7 @@ PYTHON_COMPAT=( python2_7 )
 DISTUTILS_SINGLE_IMPL=1
 inherit distutils-r1 vim-plugin
 
-DESCRIPTION="Ropevim is a plugin for performing python refactorings in vim. It uses rope library."
+DESCRIPTION="A plugin for performing python refactorings in vim. It uses rope library."
 HOMEPAGE="https://rope.sourceforge.net/ropevim.html"
 LICENSE="GPL-2"
 KEYWORDS="~amd64"

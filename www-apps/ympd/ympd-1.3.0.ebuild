@@ -27,7 +27,9 @@ src_install() {
 
 	if use systemd; then
 		systemd_dounit contrib/ympd.service
+
+		mv contrib/ympd{.default,}
 		insinto /etc/default
-		doins contrib/ympd.default
+		doins contrib/ympd
 	fi
 }

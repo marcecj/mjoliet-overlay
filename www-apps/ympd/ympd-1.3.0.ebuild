@@ -21,9 +21,7 @@ RDEPEND="${DEPEND}"
 DOCS=( "README.md" )
 
 src_install() {
-	default
-
-	doman ympd.1
+	cmake-utils_src_install
 
 	if use systemd; then
 		systemd_dounit contrib/ympd.service

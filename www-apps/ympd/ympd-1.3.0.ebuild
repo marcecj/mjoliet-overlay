@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit cmake-utils
+inherit cmake-utils systemd
 
 DESCRIPTION="Standalone MPD Web GUI written in C, utilizing Websockets and Bootstrap/JS"
 HOMEPAGE="https://www.ympd.org/ https://github.com/notandy/ympd"
@@ -13,7 +13,17 @@ SRC_URI="https://github.com/notandy/ympd/archive/v${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="systemd"
 
 DEPEND="media-libs/libmpdclient"
 RDEPEND="${DEPEND}"
+
+src_install() {
+	default
+
+	if use systemd; then
+		systemd_dounit contrib/ympd.service
+		insinto /etc/default
+		doins contrib/ympd.default
+	fi
+}

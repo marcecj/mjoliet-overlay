@@ -15,7 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="systemd"
 
-DEPEND="media-libs/libmpdclient"
+DEPEND="media-libs/libmpdclient
+	dev-libs/openssl:0
+"
 RDEPEND="${DEPEND}"
 
 DOCS=( "README.md" )

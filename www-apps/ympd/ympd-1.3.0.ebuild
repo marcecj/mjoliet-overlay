@@ -18,8 +18,12 @@ IUSE="systemd"
 DEPEND="media-libs/libmpdclient"
 RDEPEND="${DEPEND}"
 
+DOCS=( "README.md" )
+
 src_install() {
 	default
+
+	doman ympd.1
 
 	if use systemd; then
 		systemd_dounit contrib/ympd.service

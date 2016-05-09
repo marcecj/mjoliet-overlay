@@ -13,7 +13,7 @@ SRC_URI="https://github.com/zerotier/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="+webui"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
@@ -31,4 +31,9 @@ src_install() {
 	dodoc "${DOCS[@]}"
 
 	systemd_dounit ext/installfiles/linux/systemd/zerotier-one.service
+
+	if use webui; then
+		insinto /var/lib/zerotier-one/
+		doins -r ui/
+	fi
 }

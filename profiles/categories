@@ -9,7 +9,9 @@ media-gfx
 media-libs
 media-sound
 net-analyzer
+net-misc
 puredata-base
 sys-apps
 sys-fs
 sys-process
+www-apps

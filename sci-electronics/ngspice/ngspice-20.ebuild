@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-17-r2.ebuild,v 1.1 2007/05/26 20:57:56 calchan Exp $
+# $Id$
+
+EAPI="5"
 
 # FIXME: - add examples use flag
 RESTRICT="mirror"
@@ -23,10 +25,10 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 # X is supposed to be disabled with --no-x automatically...
 DEPEND="
-	readline? ( >=sys-libs/readline-5.0 )
+	readline? ( >=sys-libs/readline-5.0:5 )
 	tcl? (
-		dev-lang/tcl
-		dev-lang/tk
+		dev-lang/tcl:*
+		dev-lang/tk:*
 		>=dev-tcltk/blt-2.4z-r8
 	)
 	!tcl? ( X? (
@@ -48,9 +50,7 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# TODO: I saw no difference in CFLAGS, perhaps the sed regexp needs to change?
 	# sed -i -e 's/CFLAGS=" "/CFLAGS="\${CFLAGS}"/' configure
 	if use doc ; then
@@ -62,7 +62,7 @@ src_unpack() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	local MYCONF
 	if use debug ; then
 		MYCONF="--enable-debug \
@@ -98,6 +98,9 @@ src_compile() {
 		$(use_with readline) \
 		$(use_with tcl) \
 		|| die "econf failed"
+}
+
+src_compile() {
 	# tclspice is not parallel make safe
 	if use tcl ; then
 		emake -j1 || die "failed to emake tclspice"

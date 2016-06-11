@@ -1,6 +1,3 @@
 *~
 *.swp
 .*~
-
-# ignore electronics packages for now
-/sci-electronics/

@@ -28,6 +28,8 @@ DEPEND="dev-lang/tcl:0
 	portmidi? ( media-libs/portmidi )"
 RDEPEND="${DEPEND}"
 
+PATCHES=( "${FILESDIR}/fix-NULL-arg-to-jack_client_open.patch" )
+
 S="${WORKDIR}/${MY_P}/"
 
 # TODO: figure out how to properly fix this with --as-needed.

@@ -4,7 +4,7 @@
 
 EAPI=6
 
-inherit autotools
+inherit autotools flag-o-matic
 
 MY_P="${P/_p/-}"
 
@@ -29,6 +29,13 @@ DEPEND="dev-lang/tcl:0
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}/"
+
+# TODO: figure out how to properly fix this with --as-needed.
+# The --as-needed option prevents linking with libjack.so, which causes Pd to
+# crash when trying to use the JACK backend, so disable it.
+pkg_setup() {
+	append-ldflags $(no-as-needed)
+}
 
 src_prepare() {
 	default

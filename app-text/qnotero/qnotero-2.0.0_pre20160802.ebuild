@@ -16,7 +16,8 @@ EGIT_COMMIT="4f0b4171188c650abfb8671c809c54576d9b480c"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="qt5"
 
-DEPEND="dev-python/PyQt5"
+DEPEND="dev-python/PyQt4
+	qt5? ( dev-python/PyQt5 )"
 RDEPEND="${DEPEND}"

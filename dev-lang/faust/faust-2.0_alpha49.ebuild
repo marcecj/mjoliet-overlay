@@ -6,8 +6,6 @@ EAPI="6"
 
 RESTRICT="mirror"
 
-inherit eutils
-
 # TODO: add back the USE libfaust and httpd
 IUSE="doc examples vim-syntax"
 

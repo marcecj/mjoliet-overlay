@@ -1,8 +1,8 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI="5"
+EAPI="6"
 
 RESTRICT="mirror"
 
@@ -21,7 +21,8 @@ DESCRIPTION="Faust AUdio STreams is a functional programming language for realti
 HOMEPAGE="http://faust.grame.fr"
 SRC_URI="mirror://sourceforge/faudiostream/${myP}.tgz"
 
-COMMON_DEPEND=">=sys-devel/llvm-3.5.0
+COMMON_DEPEND=">=sys-devel/llvm-3.5.0:0
+		<sys-devel/llvm-3.8.0:0
 		net-libs/libmicrohttpd"
 RDEPEND="${COMMON_DEPEND}
 		sys-apps/sed"
@@ -33,6 +34,8 @@ DEPEND="${COMMON_DEPEND}
 S="${WORKDIR}/${myP}"
 
 src_prepare() {
+	default
+
 	# this is a dirty hack, but otherwise the build system passes "-D3.7.1" to
 	# gcc, which in turn causes a "macro names must be valid identifiers" type
 	# error

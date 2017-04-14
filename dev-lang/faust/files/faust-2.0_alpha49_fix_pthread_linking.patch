@@ -1,0 +1,11 @@
+--- a/compiler/Makefile.unix	2017-04-14 17:56:54.522519766 +0200
++++ b/compiler/Makefile.unix	2017-04-14 17:57:58.979755348 +0200
+@@ -218,7 +218,7 @@
+ ifneq ($(findstring MINGW32, $(system)),)
+ 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(objects) main.o libcode.o global.o `$(LLVM_CONFIG) --ldflags` $(LLVMLIBS) $(CLANGLIBS) $(LIBS) -lpthread -o faust
+ else
+-	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(objects) main.o libcode.o global.o `$(LLVM_CONFIG) --ldflags` $(LLVMLIBS) $(CLANGLIBS) -lcrypto -o faust
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(objects) main.o libcode.o global.o `$(LLVM_CONFIG) --ldflags` $(LLVMLIBS) $(CLANGLIBS) -lcrypto -lpthread -o faust
+ endif
+ 
+ ifeq ($(system), Darwin)

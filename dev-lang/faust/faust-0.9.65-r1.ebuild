@@ -1,12 +1,10 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI="5"
+EAPI="6"
 
 RESTRICT="mirror"
-
-inherit eutils
 
 IUSE="doc examples httpd vim-syntax"
 
@@ -23,12 +21,16 @@ DEPEND="sys-devel/bison
 		 httpd? ( net-libs/libmicrohttpd )"
 RDEPEND="sys-apps/sed"
 
+DOCS=( README WHATSNEW )
+
+PATCHES=( "${FILESDIR}/faust_0.9.65_build_httpd.patch" )
+
 src_prepare() {
 	# fix prefix
-	sed -i -e "s\/usr/local\ /usr\ " Makefile
-	sed -i -e "s\/usr/local\ /usr\ " tools/faust2appls/Makefile
+	sed -i -e "s\/usr/local\ /usr\ " Makefile || die "sed failed"
+	sed -i -e "s\/usr/local\ /usr\ " tools/faust2appls/Makefile || die "sed failed"
 
-	epatch "${FILESDIR}/faust_0.9.65_build_httpd.patch"
+	default
 }
 
 src_compile() {
@@ -40,9 +42,7 @@ src_compile() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}"
-
-	dodoc README WHATSNEW
+	default
 
 	if use doc ; then
 		dodoc documentation/*.pdf "documentation/additional documentation" || die "install doc failed"

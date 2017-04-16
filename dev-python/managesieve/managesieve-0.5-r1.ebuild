@@ -1,8 +1,8 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI="5"
+EAPI="6"
 
 RESTRICT="mirror"
 
@@ -22,6 +22,8 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=""
 
 src_prepare() {
+	default
+
 	# remove unused ez_setup, since ez_setup is not normally installed
 	sed -i -e '/ez_setup/d' setup.py || die "sed failed!"
 }

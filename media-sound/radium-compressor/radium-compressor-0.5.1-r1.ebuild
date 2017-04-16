@@ -1,12 +1,12 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI="5"
+EAPI="6"
 
 RESTRICT="mirror"
 
-inherit eutils toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="Radium Compressor is a JACK version of the system compressor in Radium."
 HOMEPAGE="https://github.com/kmatheussen/radium_compressor"
@@ -21,16 +21,14 @@ DEPEND=">=dev-lang/faust-0.9.58
 		media-sound/jack-audio-connection-kit
 		dev-qt/qtcore:4
 		dev-qt/qtgui:4
-		|| ( >=sys-devel/gcc-4.7.0:* >=sys-devel/clang-3.0 )"
+		|| ( >=sys-devel/gcc-4.7.0:* >=sys-devel/clang-3.0:* )"
 RDEPEND="${DEPEND}"
 
-DOCS=(README COPYING Changelog)
+PATCHES=( "${FILESDIR}/fix_makefile.patch" )
+
+DOCS=( README COPYING Changelog )
 
 S="${WORKDIR}/${PN/-/_}-${PV}"
-
-src_prepare() {
-	epatch "${FILESDIR}/fix_makefile.patch"
-}
 
 src_compile() {
 	CXX=$(tc-getCXX)
@@ -48,5 +46,5 @@ src_compile() {
 
 src_install() {
 	emake PREFIX="${ED}"/usr install
-	dodoc ${DOCS[@]}
+	einstalldocs
 }

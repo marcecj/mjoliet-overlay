@@ -1,8 +1,8 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI="5"
+EAPI="6"
 
 inherit autotools eutils flag-o-matic versionator
 
@@ -16,10 +16,11 @@ KEYWORDS="~amd64 ~x86"
 
 # oscx is deprecated by the mrpeach external
 # FIXME: the following don't compile on my system at configure time, so are
-# deactivated by default: pdp, pidip, gem2pdp, iem16, pdp_opengl, zexy
+# deactivated by default: pdp, pidip, gem2pdp, iem16, loaders-tclpd (requires
+# TCL 8.5), pdp_opengl, zexy
 IUSE_PD_EXTERNALS="apple arraysize +bassemu +boids +bsaylor chaos +creb +cxc
 	+earplug +ekext +ext13 +flatgui +freeverb +ggee grh
-	+hcs +iemlib jasch_lib +loaders-hexloader +loaders-libdir +loaders-tclpd
+	+hcs +iemlib jasch_lib +loaders-hexloader +loaders-libdir
 	-loaders-pdlua log +mapping +markex +maxlib miXed
 	+mjlib +moocow +moonlib +motex +mrpeach +pan +pdcontainer +pddp +pdogg
 	pduino +plugin +pmpd +sigpack +smlib testtools +tof unauthorized +vanilla
@@ -48,10 +49,16 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}/"
 
+PATCHES=(
+	"${FILESDIR}/link-with-alsa.patch"
+	"${FILESDIR}/fix-linux-linking.patch"
+	"${FILESDIR}/fix-pd-path.patch"
+)
+
 src_prepare() {
+	default
+
 	cd "${S}/pd"
-	epatch "${FILESDIR}/link-with-alsa.patch"
-	epatch "${FILESDIR}/fix-pd-path.patch"
 	eautoreconf
 }
 

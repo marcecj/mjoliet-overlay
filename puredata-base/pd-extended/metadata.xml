@@ -29,7 +29,6 @@
 		<flag name="jasch_lib">Compile the jasch_lib external</flag>
 		<flag name="loaders-hexloader">Compile the hexloader external</flag>
 		<flag name="loaders-libdir">Compile the libdir external</flag>
-		<flag name="loaders-tclpd">Compile the tclpd external</flag>
 		<flag name="loaders-pdlua">Compile the pdlua external</flag>
 		<flag name="log">Compile the log external</flag>
 		<flag name="mapping">Compile the mapping external</flag>

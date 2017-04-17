@@ -1,5 +1,5 @@
---- src/s_main.c~	2013-01-23 12:26:48.000000000 +0100
-+++ src/s_main.c	2013-04-08 02:10:53.242707363 +0200
+--- a/pd/src/s_main.c	2013-01-23 12:26:48.000000000 +0100
++++ b/pd/src/s_main.c	2013-04-08 02:10:53.242707363 +0200
 @@ -519,9 +519,9 @@
          strncat(buf, sbuf2, MAXPDSTRING-30);
          strncpy(sbuf2, buf, MAXPDSTRING-30);

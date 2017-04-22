@@ -26,6 +26,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
+	default
+
 	eaclocal
 	eautoconf
 	eautomake

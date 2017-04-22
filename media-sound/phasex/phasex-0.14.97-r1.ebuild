@@ -15,7 +15,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="lash"
 
-# NOTE: git has made lash support optional
 RDEPEND="x11-libs/libX11
 	media-sound/jack-audio-connection-kit
 	media-libs/alsa-lib

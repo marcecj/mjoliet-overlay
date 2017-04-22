@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-# NOTE: git has made lash support optional
 RDEPEND="x11-libs/libX11
 	media-sound/jack-audio-connection-kit
 	media-libs/alsa-lib

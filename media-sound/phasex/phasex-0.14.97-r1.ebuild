@@ -24,6 +24,8 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
+PATCHES=( "${FILESDIR}/${P}_fix_icon_install.patch" )
+
 src_prepare() {
 	default
 

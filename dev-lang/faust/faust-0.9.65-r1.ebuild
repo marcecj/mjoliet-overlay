@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 
-DESCRIPTION="Faust AUdio STreams is a functional programming language for realtime audio."
+DESCRIPTION="Functional AUdio STream is a functional programming language for real-time DSP."
 HOMEPAGE="http://faust.grame.fr"
 SRC_URI="mirror://sourceforge/faudiostream/${P}.zip"
 

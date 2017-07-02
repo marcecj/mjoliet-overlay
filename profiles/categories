@@ -1,10 +1,8 @@
-app-laptop
+app-shells
 app-text
 app-vim
 dev-lang
 dev-python
-dev-util
-games-emulation
 media-gfx
 media-libs
 media-sound
@@ -12,6 +10,7 @@ net-analyzer
 net-misc
 puredata-base
 sci-electronics
+sci-misc
 sys-apps
 sys-fs
 sys-process

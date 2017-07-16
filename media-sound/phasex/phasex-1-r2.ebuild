@@ -4,6 +4,8 @@
 
 EAPI="6"
 
+inherit autotools
+
 DESCRIPTION="Software synthesizer (Phase Harmonic Advanced Synthesis EXperiment)"
 HOMEPAGE="https://github.com/disabled/phasex-dev/"
 SRC_URI="mirror://github/disabled/${PN}-dev/${PN}-dev-m${PV}.tar.gz"
@@ -23,4 +25,11 @@ DEPEND="${RDEPEND}
 
 DOCS=( AUTHORS ChangeLog README TODO doc/ROADMAP )
 
+PATCHES=( "${FILESDIR}/${P}_fix_linking.patch" )
+
 S="${WORKDIR}/${PN}-dev-m${PV}"
+
+src_prepare() {
+	default
+	eautoreconf
+}

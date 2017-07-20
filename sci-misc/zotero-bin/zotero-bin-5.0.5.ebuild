@@ -41,7 +41,7 @@ src_install() {
 
 	# give it some instructions to start zotero
 	echo "#!/bin/sh" >> $D${ZOTERO_INSTALL_DIR}/zotero-start.sh
-	echo "exec "/opt/zotero/zotero"" >>  $D${ZOTERO_INSTALL_DIR}/zotero-start.sh
+	echo "exec ${ZOTERO_INSTALL_DIR}/zotero" >>  $D${ZOTERO_INSTALL_DIR}/zotero-start.sh
 
 	# make zotero-start.sh executable
 	fperms +x ${ZOTERO_INSTALL_DIR}/zotero-start.sh

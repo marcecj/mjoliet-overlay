@@ -36,18 +36,8 @@ src_install() {
 	dodir ${ZOTERO_INSTALL_DIR}
 	cp -a "${S}"/. "${D}${ZOTERO_INSTALL_DIR}" || die "Installing files failed"
 
-	# install zotero-start.sh in /opt/zotero
-	touch "$D${ZOTERO_INSTALL_DIR}/zotero-start.sh"
-
-	# give it some instructions to start zotero
-	echo "#!/bin/sh" >> $D${ZOTERO_INSTALL_DIR}/zotero-start.sh
-	echo "exec ${ZOTERO_INSTALL_DIR}/zotero" >>  $D${ZOTERO_INSTALL_DIR}/zotero-start.sh
-
-	# make zotero-start.sh executable
-	fperms +x ${ZOTERO_INSTALL_DIR}/zotero-start.sh
-
-	# sym link /opt/zotero/zotero-start.sh to /opt/bin/zotero
-	dosym ${ZOTERO_INSTALL_DIR}/zotero-start.sh /opt/bin/zotero
+	# sym link /opt/zotero/zotero to /opt/bin/zotero
+	dosym ${ZOTERO_INSTALL_DIR}/zotero /opt/bin/zotero
 
 	newicon -s 48 chrome/icons/default/default48.png zotero.png
 	newicon chrome/icons/default/default48.png zotero.png

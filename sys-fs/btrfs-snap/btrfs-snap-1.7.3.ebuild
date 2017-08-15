@@ -15,7 +15,6 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}
-	dev-lang/perl
 	sys-fs/btrfs-progs"
 
 src_install() {

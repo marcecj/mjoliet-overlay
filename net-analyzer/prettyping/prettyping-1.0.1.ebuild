@@ -4,7 +4,7 @@
 
 EAPI="6"
 
-DESCRIPTION="a wrapper around the standard `ping` tool with prettier and more compact output"
+DESCRIPTION="a wrapper around the standard 'ping' tool with prettier and more compact output"
 HOMEPAGE="http://denilson.sa.nom.br/prettyping/"
 SRC_URI="https://github.com/denilsonsa/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 

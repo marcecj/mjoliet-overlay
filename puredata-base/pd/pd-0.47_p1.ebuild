@@ -22,7 +22,7 @@ DEPEND="dev-lang/tcl:0
 	dev-lang/tk:0
 	alsa? ( media-libs/alsa-lib )
 	fftw? ( sci-libs/fftw:3.0 )
-	jack? ( media-sound/jack-audio-connection-kit )
+	jack? ( virtual/jack )
 	portaudio? ( media-libs/portaudio )
 	portmidi? ( media-libs/portmidi )"
 RDEPEND="${DEPEND}"

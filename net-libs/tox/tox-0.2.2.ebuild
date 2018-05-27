@@ -10,9 +10,9 @@ HOMEPAGE="https://tox.chat"
 SRC_URI="https://github.com/TokTok/c-toxcore/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3+"
-SLOT="0/0.1"
+SLOT="0/0.2"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="+av daemon log-debug log-error log-info log-trace log-warn +no-log ntox static-libs test"
+IUSE="+av daemon log-debug log-error log-info log-trace log-warn +no-log static-libs test"
 
 REQUIRED_USE="^^ ( no-log log-trace log-debug log-info log-warn log-error )"
 
@@ -20,14 +20,13 @@ RDEPEND="
 	av? ( media-libs/libvpx:=
 		media-libs/opus )
 	daemon? ( dev-libs/libconfig )
-	ntox? ( sys-libs/ncurses:0= )
 	>=dev-libs/libsodium-0.6.1:=[asm,urandom]"
 DEPEND="${RDEPEND}
 	$(unpacker_src_uri_depends)
 	test? ( dev-libs/check )
 	virtual/pkgconfig"
 
-S=${WORKDIR}
+S="${WORKDIR}/c-toxcore-${PV}"
 
 src_prepare() {
 	default
@@ -43,7 +42,6 @@ src_configure() {
 		$(usex log-error "--enable-logging --with-log-level=ERROR" "") \
 		$(use_enable av) \
 		$(use_enable test tests) \
-		$(use_enable ntox) \
 		$(use_enable daemon) \
 		$(use_enable static-libs static)
 }

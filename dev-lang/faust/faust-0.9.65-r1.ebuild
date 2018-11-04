@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="6"
@@ -9,7 +9,7 @@ IUSE="doc examples httpd vim-syntax"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="Functional AUdio STream is a functional programming language for real-time DSP."
 HOMEPAGE="http://faust.grame.fr"

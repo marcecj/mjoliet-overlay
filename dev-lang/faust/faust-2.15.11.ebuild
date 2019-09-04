@@ -18,7 +18,7 @@ DESCRIPTION="Functional AUdio STream is a functional programming language for re
 HOMEPAGE="http://faust.grame.fr"
 SRC_URI="https://github.com/grame-cncm/${PN}/releases/download/${PV}/${P}.tar.gz"
 
-COMMON_DEPEND="<=sys-devel/llvm-8.0.0:*
+COMMON_DEPEND="<=sys-devel/llvm-9.0.0:*
 		net-libs/libmicrohttpd"
 RDEPEND="${COMMON_DEPEND}
 		sys-apps/sed"

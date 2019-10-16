@@ -31,6 +31,8 @@ S="${WORKDIR}/EternalTerminal-et-v${PV}"
 
 src_install() {
 	default
+	insinto /etc/
+	doins etc/et.cfg
 	cmake-utils_src_install
 	systemd_dounit systemctl/et.service
 }

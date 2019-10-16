@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit cmake-utils
+inherit cmake-utils systemd
 
 DESCRIPTION="A remote shell that automatically reconnects without interrupting the session."
 HOMEPAGE="https://eternalterminal.dev/"
@@ -28,3 +28,9 @@ DEPEND="${RDEPEND}
 CMAKE_MAKEFILE_GENERATOR="emake"
 
 S="${WORKDIR}/EternalTerminal-et-v${PV}"
+
+src_install() {
+	default
+	cmake-utils_src_install
+	systemd_dounit systemctl/et.service
+}

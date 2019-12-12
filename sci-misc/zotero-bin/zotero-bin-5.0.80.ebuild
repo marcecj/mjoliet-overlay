@@ -13,7 +13,7 @@ MY_P="${MY_PN}-${PV}"
 
 RESTRICT="mirror strip"
 
-inherit eutils
+inherit desktop eutils
 
 DESCRIPTION="A tool to help you collect, organize, cite, and share your research sources."
 HOMEPAGE="https://www.zotero.org/"

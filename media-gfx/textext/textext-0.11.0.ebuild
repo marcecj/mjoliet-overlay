@@ -15,6 +15,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 # NOTE: While textext also still works with ghostscript + pstoedit, it is not
 # recommended upstream due to problems with particular version combinations of

@@ -8,8 +8,6 @@ if [ "${ARCH}" = "amd64" ] ; then
 else
 		LNXARCH="linux-i686"
 fi
-MY_PN="Zotero"
-MY_P="${MY_PN}-${PV}"
 
 RESTRICT="mirror strip"
 
@@ -17,7 +15,7 @@ inherit desktop eutils
 
 DESCRIPTION="A tool to help you collect, organize, cite, and share your research sources."
 HOMEPAGE="https://www.zotero.org/"
-SRC_URI="https://download.zotero.org/client/release/${PV}/${MY_P}_${LNXARCH}.tar.bz2"
+SRC_URI="https://download.zotero.org/client/release/${PV}/Zotero-${PV}_${LNXARCH}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -27,7 +25,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_PN}_${LNXARCH}"
+S="${WORKDIR}/Zotero_${LNXARCH}"
 
 ZOTERO_INSTALL_DIR="/opt/${PN}"
 

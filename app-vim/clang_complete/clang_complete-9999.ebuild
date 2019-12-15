@@ -11,7 +11,7 @@ inherit git-r3 vim-plugin
 DESCRIPTION="vim plugin: Use of Clang for completing C, C++, Objective-C and Objective-C++"
 HOMEPAGE="https://www.vim.org/scripts/script.php?script_id=3302"
 LICENSE="BSD"
-KEYWORDS="~amd64"
+KEYWORDS=""
 IUSE=""
 EGIT_REPO_URI="https://github.com/Rip-Rip/clang_complete.git"
 unset SRC_URI

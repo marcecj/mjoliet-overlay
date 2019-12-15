@@ -3,19 +3,17 @@
 
 EAPI=7
 
-if [ "${ARCH}" = "amd64" ] ; then
-		LNXARCH="linux-x86_64"
-else
-		LNXARCH="linux-i686"
-fi
-
 RESTRICT="mirror strip"
 
 inherit desktop eutils
 
 DESCRIPTION="A tool to help you collect, organize, cite, and share your research sources."
 HOMEPAGE="https://www.zotero.org/"
-SRC_URI="https://download.zotero.org/client/release/${PV}/Zotero-${PV}_${LNXARCH}.tar.bz2"
+BASE_URI="https://download.zotero.org/client/release/${PV}/Zotero-${PV}_linux"
+SRC_URI="
+	amd64? ( ${BASE_URI}-x86_64.tar.bz2 )
+	x86? ( ${BASE_URI}-i686.tar.bz2 )
+"
 
 LICENSE="GPL-3"
 SLOT="0"

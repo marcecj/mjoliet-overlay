@@ -13,7 +13,7 @@ HOMEPAGE="https://www.vim.org/scripts/script.php?script_id=3302"
 LICENSE="BSD"
 KEYWORDS=""
 IUSE=""
-EGIT_REPO_URI="https://github.com/Rip-Rip/clang_complete.git"
+EGIT_REPO_URI="https://github.com/xavierd/clang_complete.git"
 unset SRC_URI
 
 VIM_PLUGIN_HELPFILES=""

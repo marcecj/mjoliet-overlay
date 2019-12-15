@@ -5,7 +5,4 @@
 		<email>marcec@gmx.de</email>
 		<name>Marc Joliet</name>
 	</maintainer>
-	<use>
-		<flag name="httpd"> Additionally install the libHTTPDFaust library </flag>
-	</use>
 </pkgmetadata>

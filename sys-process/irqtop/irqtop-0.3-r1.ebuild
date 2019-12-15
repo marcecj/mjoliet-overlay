@@ -5,7 +5,7 @@ EAPI="6"
 
 DESCRIPTION="irqtop is a simple monitor for /proc/interrupts."
 HOMEPAGE="https://gitlab.com/elboulangero/irqtop/"
-SRC_URI="https://gitlab.com/elboulangero/irqtop/repository/archive.tar.gz?ref=0.3 -> ${P}.tar.gz"
+SRC_URI="https://gitlab.com/elboulangero/irqtop/-/archive/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

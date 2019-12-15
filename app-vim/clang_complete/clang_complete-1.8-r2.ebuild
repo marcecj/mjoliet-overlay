@@ -23,5 +23,7 @@ VIM_PLUGIN_MESSAGES=""
 RDEPEND="sys-devel/clang"
 
 src_prepare() {
+	default
+
 	rm "${S}/Makefile"
 }

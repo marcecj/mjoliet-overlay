@@ -6,7 +6,7 @@ EAPI=5
 inherit flag-o-matic eutils autotools
 
 DESCRIPTION="A free, minimal, hardcore audio tool for DJs and live performers"
-HOMEPAGE="http://www.giadamusic.com/"
+HOMEPAGE="https://www.giadamusic.com/"
 SRC_URI="http://www.giadamusic.com/download-action.php?os=source&version=${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-3"

@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="Functional AUdio STream is a functional programming language for real-time DSP."
-HOMEPAGE="http://faust.grame.fr"
+HOMEPAGE="https://faust.grame.fr"
 SRC_URI="https://github.com/grame-cncm/${PN}/releases/download/${PV}/${P}.tar.gz"
 
 COMMON_DEPEND="<=sys-devel/llvm-9.0.0:*

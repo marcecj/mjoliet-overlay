@@ -9,7 +9,7 @@ RESTRICT="mirror"
 inherit git-r3 vim-plugin
 
 DESCRIPTION="vim plugin: Use of Clang for completing C, C++, Objective-C and Objective-C++"
-HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=3302"
+HOMEPAGE="https://www.vim.org/scripts/script.php?script_id=3302"
 LICENSE="BSD"
 KEYWORDS="~amd64"
 IUSE=""

@@ -1,3 +1,6 @@
 *~
 *.swp
 .*~
+
+# auto-generated
+metadata/md5-cache/

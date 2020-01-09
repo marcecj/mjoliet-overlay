@@ -23,7 +23,11 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/Zotero_${LNXARCH}"
+if [ "${ARCH}" = "amd64" ] ; then
+	S="${WORKDIR}/Zotero_linux-x86_64"
+else
+	S="${WORKDIR}/Zotero_linux-i686"
+fi
 
 ZOTERO_INSTALL_DIR="/opt/${PN}"
 

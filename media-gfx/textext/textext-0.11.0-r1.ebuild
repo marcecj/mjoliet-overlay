@@ -5,7 +5,7 @@ EAPI="7"
 
 PYTHON_COMPAT=( python2_7 )
 
-inherit python-r1
+inherit python-single-r1
 
 DESCRIPTION="An inkscape extension that embeds re-editable LaTeX objects in SVG drawings"
 HOMEPAGE="https://textext.github.io/textext/"
@@ -25,9 +25,9 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 # specification mess.  Furthermore, according to upstream, pdf2svg produces
 # better SVG output.
 RDEPEND="${PYTHON_DEPS}
-	dev-python/pygtk[${PYTHON_USEDEP}]
-	dev-python/pygtksourceview[${PYTHON_USEDEP}]
-	=media-gfx/inkscape-0.92*[${PYTHON_USEDEP}]
+	$(python_gen_cond_dep dev-python/pygtk[${PYTHON_MULTI_USEDEP}])
+	$(python_gen_cond_dep dev-python/pygtksourceview[${PYTHON_MULTI_USEDEP}])
+	=media-gfx/inkscape-0.92*[${PYTHON_SINGLE_USEDEP}]
 	media-gfx/pdf2svg
 	virtual/latex-base"
 DEPEND="${RDEPEND}"

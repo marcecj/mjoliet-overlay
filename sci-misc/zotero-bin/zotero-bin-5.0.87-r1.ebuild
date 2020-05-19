@@ -21,7 +21,9 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	dev-libs/dbus-glib
+"
 
 if [ "${ARCH}" = "amd64" ] ; then
 	S="${WORKDIR}/Zotero_linux-x86_64"

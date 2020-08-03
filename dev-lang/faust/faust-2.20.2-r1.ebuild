@@ -69,7 +69,7 @@ src_install() {
 
 	if use examples ; then
 		insinto /usr/share/"${P}"/examples
-		doins examples/* || die "install examples failed"
+		doins -r examples/* || die "install examples failed"
 	fi
 
 	if use vim-syntax; then

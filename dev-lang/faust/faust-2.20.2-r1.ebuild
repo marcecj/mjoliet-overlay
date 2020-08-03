@@ -5,7 +5,7 @@ EAPI="7"
 
 RESTRICT="mirror"
 
-inherit cmake-utils multilib
+inherit cmake multilib
 
 # TODO: add back the USE libfaust and httpd
 IUSE="doc examples vim-syntax"
@@ -36,7 +36,7 @@ src_prepare() {
 	find build/ -name CMakeLists.txt -exec \
 		sed -i "s:\${CMAKE_INSTALL_PREFIX}/lib:\${CMAKE_INSTALL_PREFIX}/$(get_libdir):g" {} \; || die
 
-	cmake-utils_src_prepare
+	cmake_src_prepare
 }
 
 src_configure() {
@@ -45,12 +45,12 @@ src_configure() {
 		-DINCLUDE_DYNAMIC=ON
 		-DOSCDYNAMIC=ON
 		)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
 
 # TODO: handle static libraries separately
 src_compile() {
-	cmake-utils_src_compile
+	cmake_src_compile
 
 	if use doc; then
 		emake doc
@@ -58,7 +58,7 @@ src_compile() {
 }
 
 src_install() {
-	cmake-utils_src_install
+	cmake_src_install
 
 	dodoc README.md WHATSNEW.md
 

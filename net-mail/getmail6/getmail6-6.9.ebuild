@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="ssl"
 
-DEPEND="!!net-mail/getmail"
+RDEPEND="!net-mail/getmail"
 
 python_prepare_all() {
 	sed -i -e "s,'getmail-%s' % __version__,'${PF}'," \

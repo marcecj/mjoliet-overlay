@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=PureData
-GenericName=Multimedia programming environment
-Type=Application
-Categories=AudioVideo;Audio;
-Icon=pd-extended
-Terminal=false
-Exec=pdextended -rt

@@ -24,9 +24,11 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 
-# PATCHES=( "${FILESDIR}/${P}-respect-ldflags.patch"
-#     "${FILESDIR}/${P}-add-armv7a-support.patch"
-#     "${FILESDIR}/${P}-fixup-neon-support.patch" )
+PATCHES=(
+		 "${FILESDIR}/${P}-respect-ldflags.patch"
+		 # "${FILESDIR}/${P}-add-armv7a-support.patch"
+		 # "${FILESDIR}/${P}-fixup-neon-support.patch"
+		)
 
 DOCS=( README.md AUTHORS.md )
 

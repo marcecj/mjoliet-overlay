@@ -1,9 +1,0 @@
---- a/src/Makefile	2017-10-27 06:41:52.000000000 +0200
-+++ a/src/Makefile	2020-05-02 02:18:45.760141193 +0200
-@@ -1,5 +1,5 @@
- PRG      = irqtop
--CFLAGS  += -Wall -Wextra -Wshadow -Werror -O3
-+CFLAGS  += -Wall -Wextra -Wshadow -O3
- #CFLAGS  += -DDEBUG
- LDFLAGS +=
- 
